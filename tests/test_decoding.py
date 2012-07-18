@@ -65,3 +65,9 @@ class TestDecode(object):
             v = Vin(test['VIN'])
             print "Testing: %s - %s" % (test['VIN'], v.year)
             assert_equals(v.year, test['YEAR'])
+
+    def test_is_valid(self):
+        for test in TEST_DATA:
+            v = Vin(test['VIN'])
+            print "Testing: %s" % test['VIN']
+            assert_equals(v.is_valid, True)

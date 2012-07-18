@@ -85,7 +85,7 @@ There are at least four competing standards used to calculate VIN.
  * SAE J853: Very similar to the ISO standard
  * ADR 61/2: used in Australia, referring back to ISO 3779 and 3780
 
-Here's a breakdown of the most common types
+Here's a breakdown of the most common types:
 
 ISO 3779
 ^^^^^^^^

@@ -8,7 +8,7 @@ from libvin.static import *
 
 class Vin(object):
     def __init__(self, vin):
-        self.vin = vin
+        self.vin = vin.upper()
 
     @property
     def country(self):
@@ -42,11 +42,43 @@ class Vin(object):
         """
         return self.vin[6].isdigit()
 
+    @property
     def is_valid(self):
-        try:
-            self.region
-        except e:
-            print e
+        """
+        Returns True if a VIN is valid, otherwise returns False.
+        """
+        if len(self.vin) != 17:
+            """
+            For model years 1981 to present, the VIN is composed of 17 
+            alphanumeric values
+            """
+            return False
+
+        elif any(x in 'IOQ' for x in self.vin):
+            """ 
+            The letters I,O, Q are prohibited from any VIN position 
+            """
+            return False
+
+        elif self.vin[9] in 'UZ0':
+            """
+            The tenth position of the VIN represents the Model Year and 
+            does not permit the use of the characters U and Z, as well 
+            as the numeric zero (0)
+            """
+            return False
+
+        elif self.vin[8] not in 'X0123456789':
+            """
+            The ninth position of the VIN is a calculated value based on 
+            the other 16 alphanumeric values, it's called the 
+            "Check Digit". The result of the check digit can ONLY be a 
+            numeric 0-9 or letter "X".
+            """
+            return False
+
+        else:
+            return True
 
     @property
     def less_than_500_built_per_year(self):
