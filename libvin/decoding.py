@@ -2,7 +2,10 @@
 Copyright Maxime Haineault
 VIN Vehicle information number checker,
 
-Reference: http://en.wikipedia.org/wiki/Vehicle_Identification_Number
+References: 
+
+ * http://en.wikipedia.org/wiki/Vehicle_Identification_Number
+ * http://www.nisrinc.com/include/common/VIN.html
 
 There are at least four competing standards used to calculate VIN.
 
@@ -14,7 +17,7 @@ There are at least four competing standards used to calculate VIN.
 
 ISO 3779
 ========
- 
+
     1 2 3 | 4 5 6 7 8 9 | 10 11 12 13 14 15 16 17
     -----   -----------   -----------------------
     |       |             |
@@ -103,7 +106,7 @@ class Vin(object):
         in the range 1980-2009. If position 7 is alphabetic, the model year 
         in position 10 of VIN refers to a year in the range 2010-2039.
         """
-        return self.vin[7].isdigit()
+        return self.vin[6].isdigit()
 
     def is_valid(self):
         try:
@@ -130,18 +133,38 @@ class Vin(object):
         return WORLD_MANUFACTURER_MAP[self.vin[0]]['region']
 
     @property
+    def vis(self):
+        """
+        Returns the Vehicle Idendifier Sequence (ISO 3779)
+        Model Year, Manufacturer Plant and/or Serial Number
+        """
+        return self.vin[-8:]
+
+    @property
     def vds(self):
         """
-        Returns the Vehicle Descriptor Section
+        Returns the Vehicle Descriptor Section (ISO 3779)
+        Assigned by Manufacturer; Check Digit is Calculated
         """
         return self.vin[3:9]
 
     @property
+    def vsn(self):
+        """
+        Returns the Vehicle Sequential Number
+        """
+        if self.less_than_500_built_per_year:
+            return self.vin[-3:]
+        else:
+            return self.vin[-6:]
+
+    @property
     def wmi(self):
         """
-        Returns the World Manufacturer Identifier
+        Returns the World Manufacturer Identifier (any standards)
+        Assigned by SAE
         """
-        return self.vin[0:2]
+        return self.vin[0:3]
 
     @property
     def year(self):
@@ -151,6 +174,7 @@ class Vin(object):
         if self.is_pre_2010:
             return YEARS_CODES_PRE_2010[self.vin[9]]
         else:
+            print self.vin[9]
             return YEARS_CODES_PRE_2040[self.vin[9]]
 
 
