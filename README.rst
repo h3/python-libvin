@@ -74,6 +74,85 @@ Methods
 | year                         | Year of the vehicle model                                      |
 +------------------------------+----------------------------------------------------------------+
 
+
+Standards
+---------
+
+There are at least four competing standards used to calculate VIN.
+
+ * FMVSS 115, Part 565: Used in United States and Canada
+ * ISO Standard 3779: Used in Europe and many other parts of the world
+ * SAE J853: Very similar to the ISO standard
+ * ADR 61/2: used in Australia, referring back to ISO 3779 and 3780
+
+Here's a breakdown of the most common types
+
+ISO 3779
+^^^^^^^^
+
+::
+
+    1 2 3 | 4 5 6 7 8 9 | 10 11 12 13 14 15 16 17
+    -----   -----------   -----------------------
+    |       |             |
+    |       |             Vehicle Identifier Section
+    |       |
+    |       Vehicle Descriptor Section
+    |
+    World Manufacturer Idendified
+
+
+European Union & North America (>500 vehicles/year)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+ 
+    1 2 3 | 4 5 6 7 8 | 9 | 10 | 11 | 12 13 14 15 16 17
+    -----   ---------   -   --   --   -----------------
+    |       |           |   |    |    |
+    |       |           |   |    |    Sequential Number
+    |       |           |   |    |
+    |       |           |   |    Plant Code
+    |       |           |   |
+    |       |           |   Model Year
+    |       |           |
+    |       |           Check Digit
+    |       |
+    |       Vehicle Attributes
+    |
+    World Manufacturer Idendified
+
+
+European Union & North America (<500 vehicles/year)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+ 
+    1 2 3 | 4 5 6 7 8 | 9 | 10 | 11 | 12 13 14 | 15 16 17
+    -----   ---------   -   --   --   --------   --------
+    |       |           |   |    |    |          |
+    |       |           |   |    |    |          Sequential Number
+    |       |           |   |    |    |
+    |       |           |   |    |    Manufacturer Identifier
+    |       |           |   |    |
+    |       |           |   |    Plant Code
+    |       |           |   |
+    |       |           |   Model Year
+    |       |           |
+    |       |           Check Digit
+    |       |
+    |       Vehicle Attributes
+    |
+    World Manufacturer Idendified
+
+
+References
+----------
+
+ * http://en.wikipedia.org/wiki/Vehicle_Identification_Number
+ * http://www.nisrinc.com/include/common/VIN.html
+
+
 Credits
 =======
 
