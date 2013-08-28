@@ -24,7 +24,7 @@ def is_valid(vin):
             add+=(converted[i]*multiplier[i])
         final= (add%11)
         if final ==10:
-            final='x'
+            final='X'
         if str(final)==vin[8]:
             return True
         else:
