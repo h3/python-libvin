@@ -4,7 +4,7 @@ libvin - VIN Vehicle information number checker
 """
 
 from libvin.static import *
-
+from libvin import wmi_map
 
 class Vin(object):
     def __init__(self, vin):
@@ -133,6 +133,15 @@ class Vin(object):
         return self.vin[0:3]
 
     @property
+    def manufacturer(self):
+        wmi = self.wmi
+        if wmi[:3] in wmi_map.WMI_MAP:
+            return wmi_map.WMI_MAP[wmi[:3]]
+        if wmi[:2] in wmi_map.WMI_MAP:
+            return wmi_map.WMI_MAP[wmi[:2]]
+        return 'Unknown'
+
+    @property
     def year(self):
         """
         Returns the model year of the vehicle
@@ -140,7 +149,6 @@ class Vin(object):
         if self.is_pre_2010:
             return YEARS_CODES_PRE_2010[self.vin[9]]
         else:
-            print self.vin[9]
             return YEARS_CODES_PRE_2040[self.vin[9]]
 
 

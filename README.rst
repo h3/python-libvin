@@ -34,6 +34,8 @@ Low level API example
     Canada
     >>> v.year
     2006
+    >>> v.manufacturer
+    Honada Canda
     >>> v.is_pre_2010
     True
     >>> v.wmi
@@ -46,7 +48,6 @@ Low level API example
     632476
     >>> v.less_than_500_built_per_year
     False
-
 
 
 Methods
