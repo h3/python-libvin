@@ -23,7 +23,7 @@ Feel free to contribute !
 Low level API example
 ---------------------
 
-::
+.. code-block:: python
 
     >>> from libvin.decoding import Vin
     >>>
