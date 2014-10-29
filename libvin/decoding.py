@@ -4,7 +4,6 @@ libvin - VIN Vehicle information number checker
 """
 
 from libvin.static import *
-from libvin import wmi_map
 
 class Vin(object):
     def __init__(self, vin):
@@ -54,21 +53,26 @@ class Vin(object):
             """
             return False
 
-        elif any(x in 'IOQ' for x in self.vin):
+        if any(x in 'IOQ' for x in self.vin):
             """ 
             The letters I,O, Q are prohibited from any VIN position 
             """
             return False
 
-        elif self.vin[9] in 'UZ0':
+        if self.vin[9] in 'UZ0':
             """
             The tenth position of the VIN represents the Model Year and 
             does not permit the use of the characters U and Z, as well 
             as the numeric zero (0)
             """
             return False
+        
+        products = [VIN_WEIGHT[i] * VIN_TRANSLATION[j] for i, j in enumerate(self.vin)]
+        check_digit = sum(products) % 11
+        if check_digit == 10:
+            check_digit = 'X'
 
-        elif self.vin[8] not in 'X0123456789':
+        if self.vin[8] != str(check_digit):
             """
             The ninth position of the VIN is a calculated value based on 
             the other 16 alphanumeric values, it's called the 
@@ -77,8 +81,7 @@ class Vin(object):
             """
             return False
 
-        else:
-            return True
+        return True
 
     @property
     def less_than_500_built_per_year(self):
@@ -135,10 +138,10 @@ class Vin(object):
     @property
     def manufacturer(self):
         wmi = self.wmi
-        if wmi[:3] in wmi_map.WMI_MAP:
-            return wmi_map.WMI_MAP[wmi[:3]]
-        if wmi[:2] in wmi_map.WMI_MAP:
-            return wmi_map.WMI_MAP[wmi[:2]]
+        if wmi[:3] in WMI_MAP:
+            return WMI_MAP[wmi[:3]]
+        if wmi[:2] in WMI_MAP:
+            return WMI_MAP[wmi[:2]]
         return 'Unknown'
 
     @property
