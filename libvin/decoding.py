@@ -165,7 +165,6 @@ class Vin(object):
         if self.year > 2011:
             if man == "Chrysler":
                 brandcode = self.vin[4]
-                print "brandcode is %s" % brandcode
                 if brandcode == 'D':
                     make = 'Dodge'
                 if brandcode == 'F':
