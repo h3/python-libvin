@@ -101,6 +101,11 @@ TEST_DATA = [
      'MODEL': 'Journey', 'MAKE':  'Dodge', 'YEAR': 2010, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '152960', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=3D4PH7FG1BT808130&submit=Decode
+    {'VIN': '3D4PH7FG1BT808130', 'WMI': '3D4', 'VDS': 'PH7FG1', 'VIS': 'BT808130',
+     'MODEL': 'Journey', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '808130', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=3GYVKMEF5AG416315&submit=Decode
     {'VIN': '3GYVKMEF5AG416315', 'WMI': '3GY', 'VDS': 'VKMEF5', 'VIS': 'AG416315',
      'MODEL': 'Escalade', 'MAKE':  'Cadillac', 'YEAR': 2010, 'COUNTRY': 'Mexico',
