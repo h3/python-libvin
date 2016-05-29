@@ -50,6 +50,13 @@ TEST_DATA = [
      'MODEL': 'Outlander ES', 'MAKE':  'Mitsubishi', 'YEAR': 2014, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '426420', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=JTHBW1GG7D2369737&submit=Decode has no model
+    # http://www.autocalculator.org/VIN/WMI.aspx agrees JTH is Lexus
+    # http://www.clublexus.com/forums/vindecoder.php?vin=JTHBW1GG7D2369737
+    {'VIN': 'JTHBW1GG7D2369737', 'WMI': 'JTH', 'VDS': 'BW1GG7', 'VIS': 'D2369737',
+     'MODEL': 'ES 300h', 'MAKE':  'Lexus', 'YEAR': 2013, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '369737', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=JM1BL1SF3A1267720&submit=Decode
     {'VIN': 'JM1BL1SF3A1267720', 'WMI': 'JM1', 'VDS': 'BL1SF3', 'VIS': 'A1267720',
      'MODEL': 'MAZDA3', 'MAKE':  'Mazda', 'YEAR': 2010, 'COUNTRY': 'Japan',
