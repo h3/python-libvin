@@ -44,6 +44,12 @@ TEST_DATA = [
      'MODEL': 'F-150', 'MAKE':  'Ford', 'YEAR': 1984, 'COUNTRY': 'Canada',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': 'A55516', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=2HNYD18975H033218&submit=Decode
+    # http://acurazine.com/forums/vindecoder.php?vin=2HNYD18975H033218
+    {'VIN': '2HNYD18975H033218', 'WMI': '2HN', 'VDS': 'YD1897', 'VIS': '5H033218',
+     'MODEL': 'MDX', 'MAKE':  'Acura', 'YEAR': 2005, 'COUNTRY': 'Canada',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '033218', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=JA4AD2A3XEZ426420&submit=Decode didn't have model
     # https://www.mitsubishicars.com/owners/support/vin-information
     {'VIN': 'JA4AD2A3XEZ426420', 'WMI': 'JA4', 'VDS': 'AD2A3X', 'VIS': 'EZ426420',
