@@ -422,6 +422,7 @@ WMI_MAP = {
     '3G': 'General Motors Mexico',
     '3GY': 'Cadillac',
     '3H': 'Honda Mexico',
+    '3LN': 'Lincoln',
     '3N': 'Nissan Mexico',
     '3P3': 'Plymouth Mexico',
     '3VW': 'Volkswagen Mexico',

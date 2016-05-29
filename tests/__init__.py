@@ -85,6 +85,11 @@ TEST_DATA = [
      'MODEL': 'Escalade', 'MAKE':  'Cadillac', 'YEAR': 2010, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '416315', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=3LNHL2GC1BR262548&submit=Decode
+    {'VIN': '3LNHL2GC1BR262548', 'WMI': '3LN', 'VDS': 'HL2GC1', 'VIS': 'BR262548',
+     'MODEL': 'MKZ', 'MAKE':  'Lincoln', 'YEAR': 2011, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '262548', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=5GADS13S072592644&submit=Decode
     # https://service.gm.com/dealerworld/vincards/
     # https://service.gm.com/dealerworld/vincards/pdf/vincard07.pdf
