@@ -56,6 +56,11 @@ TEST_DATA = [
      'MODEL': 'MDX', 'MAKE':  'Acura', 'YEAR': 2005, 'COUNTRY': 'Canada',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '033218', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=2LMHJ5AT9CB565906&submit=Decode
+    {'VIN': '2LMHJ5AT9CB565906', 'WMI': '2LM', 'VDS': 'HJ5AT9', 'VIS': 'CB565906',
+     'MODEL': 'MKT', 'MAKE':  'Lincoln', 'YEAR': 2012, 'COUNTRY': 'Canada',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '565906', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vin-decoder.org/details?vin=3C3CFFCR9FT528063
     # http://www.fiat500usa.com/2013/08/decoding-fiat-500-vin.html
     # Chrysler Passenger Car Vehicle Identification Number Code Guide
