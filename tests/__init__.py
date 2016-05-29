@@ -103,6 +103,12 @@ TEST_DATA = [
      'MODEL': 'Flying Spur', 'MAKE':  'Bentley', 'YEAR': 2014, 'COUNTRY': 'United Kingdom',
      'REGION': 'europe', 'SEQUENTIAL_NUMBER': '225243', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=SCFAD01A65G199359&submit=Decode
+    # http://www.fueleconomy.gov/ws/rest/vehicle/menu/model?year=2005&make=Aston%20Martin verifies spelling
+    {'VIN': 'SCFAD01A65G199359', 'WMI': 'SCF', 'VDS': 'AD01A6', 'VIS': '5G199359',
+     'MODEL': 'DB9', 'MAKE':  'Aston Martin', 'YEAR': 2005, 'COUNTRY': 'United Kingdom',
+     'REGION': 'europe', 'SEQUENTIAL_NUMBER': '199359', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=WA1EY74LX9D205644&submit=Decode
     # https://vindecoder.eu/check-vin/WA1EY74LX9D205644
     {'VIN': 'WA1EY74LX9D205644', 'WMI': 'WA1', 'VDS': 'EY74LX', 'VIS': '9D205644',

@@ -264,7 +264,7 @@ WMI_MAP = {
     'SCB': 'Bentley',
     'SCC': 'Lotus Cars',
     'SCE': 'DeLorean Motor Cars N. Ireland (UK)',
-    'SCF': 'Aston',
+    'SCF': 'Aston Martin',
     'SDB': 'Peugeot UK',
     'SFD': 'Alexander Dennis UK',
     'SHS': 'Honda UK',
