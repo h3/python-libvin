@@ -174,7 +174,7 @@ class Vin(object):
         # https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/Chrysler/VIN_Codes
         # http://www.allpar.com/mopar/vin-decoder.html
         if self.year > 2011:
-            if man == "Chrysler":
+            if man == 'Chrysler':
                 brandcode = self.vin[4]
                 if brandcode == 'D':
                     make = 'Dodge'
@@ -182,6 +182,11 @@ class Vin(object):
                     make = 'Fiat'
                 if brandcode == 'J':
                     make = 'Jeep'
+        if man == 'Nissan':
+            # FIXME: this was gathered from a single test case, probably needs updating
+            brandcode = self.vin[3]
+            if brandcode == 'C':
+                make = 'Infiniti'
         return make
 
     @property

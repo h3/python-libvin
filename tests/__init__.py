@@ -178,6 +178,18 @@ TEST_DATA = [
      'MODEL': 'TSX', 'MAKE':  'Acura', 'YEAR': 2011, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '567925', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=JN1CV6FE4EM164066&submit=Decode
+    # http://infinitihelp.com/diy/common/infiniti_vin.php
+    {'VIN': 'JN1CV6FE4EM164066', 'WMI': 'JN1', 'VDS': 'CV6FE4', 'VIS': 'EM164066',
+     'MODEL': 'Q60 Convertible', 'MAKE':  'Infiniti', 'YEAR': 2014, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '164066', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # And another random JN1 that isn't Infiniti
+    # http://nissanvindecoder.com/vins/jn1az44ex9m403788
+    {'VIN': 'JN1AZ44EX9M403788', 'WMI': 'JN1', 'VDS': 'AZ44EX', 'VIS': '9M403788',
+     'MODEL': '370Z', 'MAKE':  'Nissan', 'YEAR': 2009, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '403788', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=JTHBW1GG7D2369737&submit=Decode has no model
     # http://www.autocalculator.org/VIN/WMI.aspx agrees JTH is Lexus
     # http://www.clublexus.com/forums/vindecoder.php?vin=JTHBW1GG7D2369737
