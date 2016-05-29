@@ -18,7 +18,7 @@ class Vin(object):
         countries = WORLD_MANUFACTURER_MAP[self.vin[0]]['countries']
 
         for codes in countries:
-            if self.vin[0] in codes:
+            if self.vin[1] in codes:
                 return countries[codes]
 
         return 'Unknown'

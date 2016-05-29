@@ -261,6 +261,7 @@ WMI_MAP = {
     'SAJ': 'Jaguar',
     'SAR': 'Rover',
     'SCA': 'Rolls Royce',
+    'SCB': 'Bentley',
     'SCC': 'Lotus Cars',
     'SCE': 'DeLorean Motor Cars N. Ireland (UK)',
     'SCF': 'Aston',
