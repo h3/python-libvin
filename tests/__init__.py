@@ -106,6 +106,17 @@ TEST_DATA = [
      'MODEL': 'Journey', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '808130', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=3D73Y3CL0BG113805&submit=Decode
+    # Edmunds has this as Dodge up to 2010, RAM thereafter,
+    # but EPA confused; https://www.fueleconomy.gov/feg/EPAGreenGuide/txt/all_alpha_11.txt has it as Dodge still
+    # ftp://safercar.gov/MfrMail/ORG7565.pdf bit confused too
+    # ftp://safercar.gov/MfrMail/ORG5870.pdf is for 2011, but calls it Dodge still
+    # Heck, http://www.rambodybuilder.com/2012/docs/intro/vin.pdf is 2012, and still calls it Dodge
+    # Screw it, let's go with Dodge, as I have no way of getting this right
+    {'VIN': '3D73Y3CL0BG113805', 'WMI': '3D7', 'VDS': '3Y3CL0', 'VIS': 'BG113805',
+     'MODEL': 'Ram 3500', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '113805', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=3GYVKMEF5AG416315&submit=Decode
     {'VIN': '3GYVKMEF5AG416315', 'WMI': '3GY', 'VDS': 'VKMEF5', 'VIS': 'AG416315',
      'MODEL': 'Escalade', 'MAKE':  'Cadillac', 'YEAR': 2010, 'COUNTRY': 'Mexico',
