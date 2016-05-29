@@ -100,6 +100,11 @@ TEST_DATA = [
      'MODEL': 'Outlander ES', 'MAKE':  'Mitsubishi', 'YEAR': 2014, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '426420', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=JH4CW2H53BC567925&submit=Decode
+    {'VIN': 'JH4CW2H53BC567925', 'WMI': 'JH4', 'VDS': 'CW2H53', 'VIS': 'BC567925',
+     'MODEL': 'TSX', 'MAKE':  'Acura', 'YEAR': 2011, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '567925', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=JTHBW1GG7D2369737&submit=Decode has no model
     # http://www.autocalculator.org/VIN/WMI.aspx agrees JTH is Lexus
     # http://www.clublexus.com/forums/vindecoder.php?vin=JTHBW1GG7D2369737

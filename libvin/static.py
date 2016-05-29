@@ -207,6 +207,7 @@ WMI_MAP = {
     'JHM': 'Honda',
     'JHG': 'Honda',
     'JHL': 'Honda',
+    'JH4': 'Acura',
     'JK': 'Kawasaki (motorcycles)',
     'JM': 'Mazda',
     'JN': 'Nissan',
