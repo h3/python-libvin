@@ -303,6 +303,7 @@ WMI_MAP = {
     'VX1': 'Zastava / Yugo Serbia',
     'WAG': 'Neoplan',
     'WAU': 'Audi',
+    'WA1': 'Audi',
     'WBA': 'BMW',
     'WBS': 'BMW M',
     'WDB': 'Mercedes-Benz',

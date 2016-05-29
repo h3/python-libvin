@@ -75,6 +75,12 @@ TEST_DATA = [
      'MODEL': 'MAZDA3', 'MAKE':  'Mazda', 'YEAR': 2010, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '267720', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=WA1EY74LX9D205644&submit=Decode
+    # https://vindecoder.eu/check-vin/WA1EY74LX9D205644
+    {'VIN': 'WA1EY74LX9D205644', 'WMI': 'WA1', 'VDS': 'EY74LX', 'VIS': '9D205644',
+     'MODEL': 'Q7', 'MAKE':  'Audi', 'YEAR': 2009, 'COUNTRY': 'Germany',
+     'REGION': 'europe', 'SEQUENTIAL_NUMBER': '205644', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=WDCYC7DF3FX109287&submit=Decode
     # http://www.vindecoderz.com/EN/check-lookup/WDCYC7DF3FX109287
     # http://www.autocalculator.org/VIN/WMI.aspx says WDC is Mercedes-Benz, hmm
