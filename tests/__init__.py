@@ -56,6 +56,14 @@ TEST_DATA = [
      'MODEL': 'MDX', 'MAKE':  'Acura', 'YEAR': 2005, 'COUNTRY': 'Canada',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '033218', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vin-decoder.org/details?vin=3C3CFFCR9FT528063
+    # http://www.fiat500usa.com/2013/08/decoding-fiat-500-vin.html
+    # Chrysler Passenger Car Vehicle Identification Number Code Guide
+    # ftp://ftp.nhtsa.dot.gov/MfrMail/ORG9653.pdf
+    {'VIN': '3C3CFFCR9FT528063', 'WMI': '3C3', 'VDS': 'CFFCR9', 'VIS': 'FT528063',
+     'MODEL': '500', 'MAKE':  'Fiat', 'YEAR': 2015, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '528063', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=5GADS13S072592644&submit=Decode
     # https://service.gm.com/dealerworld/vincards/
     # https://service.gm.com/dealerworld/vincards/pdf/vincard07.pdf

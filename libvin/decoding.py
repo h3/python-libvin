@@ -170,6 +170,8 @@ class Vin(object):
                 print "brandcode is %s" % brandcode
                 if brandcode == 'D':
                     make = 'Dodge'
+                if brandcode == 'F':
+                    make = 'Fiat'
         return make
 
     @property

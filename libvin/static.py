@@ -129,12 +129,8 @@ WORLD_MANUFACTURER_MAP = {
             'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890': 'Canada'}},
 
     '3': {'region': 'north_america', 'countries': {
-            'ABCDEFGHIJKLMNOPQRSTUVW': 'Mexico'}},
-
-    '3': {'region': 'north_america', 'countries': {
-            'XYZ1234567': 'Costa Rica'}},
-
-    '3': {'region': 'north_america', 'countries': {
+            'ABCDEFGHIJKLMNOPQRSTUVW3': 'Mexico',
+            'XYZ124567': 'Costa Rica',
             '890': 'Cayman Islands'}},
 
     '4': {'region': 'north_america', 'countries': {
@@ -413,6 +409,7 @@ WMI_MAP = {
     '2WK': 'Western Star',
     '2WL': 'Western Star',
     '2WM': 'Western Star',
+    '3C3': 'Chrysler',
     '3D3': 'Dodge Mexico',
     '3FA': 'Ford Motor Company Mexico',
     '3FE': 'Ford Motor Company Mexico',
