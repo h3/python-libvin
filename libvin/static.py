@@ -388,6 +388,7 @@ WMI_MAP = {
     '2A4': 'Chrysler Canada',
     '2B3': 'Dodge Canada',
     '2C3': 'Chrysler Canada',
+    '2C4': 'Chrysler Canada',
     '2CN': 'CAMI',
     '2D3': 'Dodge Canada',
     '2FA': 'Ford Motor Company Canada',

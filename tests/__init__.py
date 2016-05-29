@@ -60,6 +60,11 @@ TEST_DATA = [
      'MODEL': 'Challenger', 'MAKE':  'Dodge', 'YEAR': 2013, 'COUNTRY': 'Canada',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '825982', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=2C4RDGBG4FR987134&submit=Decode
+    {'VIN': '2C4RDGBG4FR987134', 'WMI': '2C4', 'VDS': 'RDGBG4', 'VIS': 'FR987134',
+     'MODEL': 'Grand Caravan', 'MAKE':  'Dodge', 'YEAR': 2015, 'COUNTRY': 'Canada',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '987134', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=2FTCF15F2ECA55516&submit=Decode
     {'VIN': '2FTCF15F2ECA55516', 'WMI': '2FT', 'VDS': 'CF15F2', 'VIS': 'ECA55516',
      'MODEL': 'F-150', 'MAKE':  'Ford', 'YEAR': 1984, 'COUNTRY': 'Canada',
