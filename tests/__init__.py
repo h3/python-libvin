@@ -155,6 +155,11 @@ TEST_DATA = [
      'MODEL': 'DB9', 'MAKE':  'Aston Martin', 'YEAR': 2005, 'COUNTRY': 'United Kingdom',
      'REGION': 'europe', 'SEQUENTIAL_NUMBER': '199359', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=TRUSC28N711268458&submit=Decode
+    {'VIN': 'TRUSC28N711268458', 'WMI': 'TRU', 'VDS': 'SC28N7', 'VIS': '11268458',
+     'MODEL': 'TT', 'MAKE':  'Audi', 'YEAR': 2001, 'COUNTRY': 'Hungary',
+     'REGION': 'europe', 'SEQUENTIAL_NUMBER': '268458', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=WA1EY74LX9D205644&submit=Decode
     # https://vindecoder.eu/check-vin/WA1EY74LX9D205644
     {'VIN': 'WA1EY74LX9D205644', 'WMI': 'WA1', 'VDS': 'EY74LX', 'VIS': '9D205644',
