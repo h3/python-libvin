@@ -416,6 +416,7 @@ WMI_MAP = {
     '3FA': 'Ford Motor Company Mexico',
     '3FE': 'Ford Motor Company Mexico',
     '3G': 'General Motors Mexico',
+    '3GY': 'Cadillac',
     '3H': 'Honda Mexico',
     '3N': 'Nissan Mexico',
     '3P3': 'Plymouth Mexico',
