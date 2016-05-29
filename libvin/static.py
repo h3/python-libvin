@@ -361,6 +361,7 @@ WMI_MAP = {
     '1G6': 'Cadillac USA',
     '1GM': 'Pontiac USA',
     '1G8': 'Saturn USA',
+    '1GY': 'Cadillac',
     '1H': 'Honda USA',
     '1HD': 'Harley-Davidson',
     '1J4': 'Jeep',
