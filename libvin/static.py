@@ -214,6 +214,7 @@ WMI_MAP = {
     'JS': 'Suzuki',
     'JT': 'Toyota',
     'JTH': 'Lexus',
+    'JTJ': 'Lexus',
     'KL': 'Daewoo General Motors South Korea',
     'KM8': 'Hyundai',
     'KMH': 'Hyundai',
