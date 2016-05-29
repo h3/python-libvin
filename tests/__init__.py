@@ -1,5 +1,11 @@
 # Sorted alphabetically by VIN
 TEST_DATA = [
+    # http://www.vindecoder.net/?vin=19UUA65694A043249&submit=Decode
+    # http://acurazine.com/forums/vindecoder.php?vin=19UUA65694A043249
+    {'VIN': '19UUA65694A043249', 'WMI': '19U', 'VDS': 'UA6569', 'VIS': '4A043249',
+     'MODEL': 'TL', 'MAKE':  'Acura', 'YEAR': 2004, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '043249', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=19XFB4F24DE547421&submit=Decode says unknown
     # http://www.civicx.com/threads/2016-civic-vin-translator-decoder-guide.889/
     {'VIN': '19XFB4F24DE547421', 'WMI': '19X', 'VDS': 'FB4F24', 'VIS': 'DE547421',

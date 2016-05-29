@@ -382,6 +382,7 @@ WMI_MAP = {
     '1XK': 'Kenworth USA',
     '1XP': 'Peterbilt USA',
     '1YV': 'Mazda USA (AutoAlliance International)',
+    '19U': 'Acura',
     '19X': 'Honda',
     '2A4': 'Chrysler Canada',
     '2B3': 'Dodge Canada',
@@ -487,7 +488,7 @@ VIN_TRANSLATION = {
     'H': 8, 'V': 5, '6': 6,
     'J': 1, 'W': 6, '7': 7,
     'K': 2, 'X': 7, '8': 8,
-    '9': 9, '0': 0
+    '9': 9, '0': 0, 'U': 4,
 }
 
 VIN_WEIGHT = [8,7,6,5,4,3,2,10,0,9,8,7,6,5,4,3,2]
