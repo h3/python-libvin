@@ -64,6 +64,12 @@ TEST_DATA = [
      'MODEL': '500', 'MAKE':  'Fiat', 'YEAR': 2015, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '528063', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=3C6JD7CT4CG104778&submit=Decode
+    # ftp://safercar.gov/MfrMail/ORG7565.pdf
+    {'VIN': '3C6JD7CT4CG104778', 'WMI': '3C6', 'VDS': 'JD7CT4', 'VIS': 'CG104778',
+     'MODEL': 'Ram 1500 Pickup', 'MAKE':  'Dodge', 'YEAR': 2012, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '104778', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=5GADS13S072592644&submit=Decode
     # https://service.gm.com/dealerworld/vincards/
     # https://service.gm.com/dealerworld/vincards/pdf/vincard07.pdf
