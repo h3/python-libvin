@@ -162,9 +162,7 @@ class Vin(object):
         # 2012 and later: first 3 positions became overloaded, some 'make' aka brand info moved further in; see
         # https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/Chrysler/VIN_Codes
         # http://www.allpar.com/mopar/vin-decoder.html
-        print "year is %s" % self.year
         if self.year > 2011:
-            print "man is %s" % man
             if man == "Chrysler":
                 brandcode = self.vin[4]
                 print "brandcode is %s" % brandcode
