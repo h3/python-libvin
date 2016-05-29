@@ -169,6 +169,8 @@ class Vin(object):
                     make = 'Dodge'
                 if brandcode == 'F':
                     make = 'Fiat'
+                if brandcode == 'J':
+                    make = 'Jeep'
         return make
 
     @property
