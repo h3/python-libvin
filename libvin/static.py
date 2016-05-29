@@ -437,6 +437,7 @@ WMI_MAP = {
     '4VZ': 'Volvo',
     '5F': 'Honda USA-Alabama',
     '5GA': 'Buick',
+    '5J8': 'Acura',
     '5L': 'Lincoln',
     '5N1': 'Nissan USA',
     '5NP': 'Hyundai USA',

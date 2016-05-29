@@ -77,6 +77,11 @@ TEST_DATA = [
      'MODEL': 'Ranier', 'MAKE':  'Buick', 'YEAR': 2007, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '592644', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=5J8TB1H27CA348655&submit=Decode
+    {'VIN': '5J8TB1H27CA348655', 'WMI': '5J8', 'VDS': 'TB1H27', 'VIS': 'CA348655',
+     'MODEL': 'RDX', 'MAKE':  'Acura', 'YEAR': 2012, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '348655', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=5UXXW5C54F0791433&submit=Decode
     # http://www.partesymas.com/VIN-Interpretation-Tables-2026.pdf showed 4-7 were the model,body,engine code
     # http://www.autoredbook.com/ distinguished between the two X4 models
