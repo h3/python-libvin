@@ -302,7 +302,7 @@ WMI_MAP = {
     'WAU': 'Audi',
     'WA1': 'Audi',
     'WBA': 'BMW',
-    'WBS': 'BMW M',
+    'WBS': 'BMW',
     'WDB': 'Mercedes-Benz',
     'WDC': 'Mercedes-Benz',
     'WDD': 'McLaren',

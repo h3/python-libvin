@@ -126,6 +126,11 @@ TEST_DATA = [
      'MODEL': 'Q7', 'MAKE':  'Audi', 'YEAR': 2009, 'COUNTRY': 'Germany',
      'REGION': 'europe', 'SEQUENTIAL_NUMBER': '205644', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=WBSWL9C54AP786013&submit=Decode
+    {'VIN': 'WBSWL9C54AP786013', 'WMI': 'WBS', 'VDS': 'WL9C54', 'VIS': 'AP786013',
+     'MODEL': 'M3 Convertible', 'MAKE':  'BMW', 'YEAR': 2010, 'COUNTRY': 'Germany',
+     'REGION': 'europe', 'SEQUENTIAL_NUMBER': '786013', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=WDCYC7DF3FX109287&submit=Decode
     # http://www.vindecoderz.com/EN/check-lookup/WDCYC7DF3FX109287
     # http://www.autocalculator.org/VIN/WMI.aspx says WDC is Mercedes-Benz, hmm
