@@ -1,6 +1,7 @@
 """
 libvin - VIN Vehicle information number checker
 (c) Copyright 2012 Maxime Haineault <max@motion-m.ca>
+(c) Copyright 2016 Dan Kegel <dank@kegel.com>
 """
 
 from libvin.static import *
@@ -157,7 +158,19 @@ class Vin(object):
                 man = man.replace(" %s" % suffix, "")
         if man == "General Motors":
             return "GMC"
-        return man
+        make = man
+        # 2012 and later: first 3 positions became overloaded, some 'make' aka brand info moved further in; see
+        # https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/Chrysler/VIN_Codes
+        # http://www.allpar.com/mopar/vin-decoder.html
+        print "year is %s" % self.year
+        if self.year > 2011:
+            print "man is %s" % man
+            if man == "Chrysler":
+                brandcode = self.vin[4]
+                print "brandcode is %s" % brandcode
+                if brandcode == 'D':
+                    make = 'Dodge'
+        return make
 
     @property
     def year(self):
