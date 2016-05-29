@@ -145,6 +145,21 @@ class Vin(object):
         return 'Unknown'
 
     @property
+    def make(self):
+        '''
+        This is like manufacturer, but without country or other suffixes, and should be short common name.
+        Should be same as values from e.g. http://www.fueleconomy.gov/ws/rest/vehicle/menu/make?year=2012
+        Should probably have a static table instead of doing late fixup like this.
+        '''
+        man = self.manufacturer
+        for suffix in ['Mexico', 'USA', 'USA - trucks', 'Canada', 'Turkey', 'Motor Company']:
+            if man.endswith(suffix):
+                man = man.replace(" %s" % suffix, "")
+        if man == "General Motors":
+            return "GMC"
+        return man
+
+    @property
     def year(self):
         """
         Returns the model year of the vehicle

@@ -196,6 +196,9 @@ YEARS_CODES_PRE_2040 = {
     'K': 2019,    'X': 2029, '9': 2039,
 }
 
+# Possible sources for missing entries:
+# https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/World_Manufacturer_Identifier_(WMI)
+# http://www.civicx.com/threads/2016-civic-vin-translator-decoder-guide.889/
 WMI_MAP = {
     'AFA': 'Ford South Africa',
     'AAV': 'Volkswagen South Africa',
@@ -373,6 +376,9 @@ WMI_MAP = {
     '1XK': 'Kenworth USA',
     '1XP': 'Peterbilt USA',
     '1YV': 'Mazda USA (AutoAlliance International)',
+    '19X': 'Honda',
+    '2A4': 'Chrysler Canada',
+    '2B3': 'Dodge Canada',
     '2C3': 'Chrysler Canada',
     '2CN': 'CAMI',
     '2D3': 'Dodge Canada',
