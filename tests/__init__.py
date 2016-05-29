@@ -195,6 +195,12 @@ TEST_DATA = [
      'MODEL': 'G643', 'MAKE':  'Mercedes-Benz', 'YEAR': 2015, 'COUNTRY': 'Germany',
      'REGION': 'europe', 'SEQUENTIAL_NUMBER': '109287', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=WDDNG7BB4AA522219&submit=Decode
+    # ftp://safercar.gov/MfrMail/ORG4488.pdf
+    {'VIN': 'WDDNG7BB4AA522219', 'WMI': 'WDD', 'VDS': 'NG7BB4', 'VIS': 'AA522219',
+     'MODEL': 'S550', 'MAKE':  'Mercedes-Benz', 'YEAR': 2010, 'COUNTRY': 'Germany',
+     'REGION': 'europe', 'SEQUENTIAL_NUMBER': '522219', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=YV1902FH5D1796335&submit=Decode doesn't have model
     # http://www.vindecoderz.com/EN/check-lookup/YV1902FH5D1796335
     # http://www.fueleconomy.gov/ws/rest/vehicle/menu/model?year=2013&make=Volvo confirms XC60
