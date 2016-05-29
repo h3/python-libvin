@@ -205,6 +205,7 @@ WMI_MAP = {
     'AFA': 'Ford South Africa',
     'AAV': 'Volkswagen South Africa',
     'JA3': 'Mitsubishi',
+    'JA4': 'Mitsubishi',
     'JA': 'Isuzu',
     'JF': 'Fuji Heavy Industries (Subaru)',
     'JHM': 'Honda',
