@@ -153,7 +153,7 @@ class Vin(object):
         Should probably have a static table instead of doing late fixup like this.
         '''
         man = self.manufacturer
-        for suffix in ['Mexico', 'USA', 'USA - trucks', 'Canada', 'Turkey', 'Motor Company']:
+        for suffix in ['Mexico', 'USA', 'USA - trucks', 'Canada', 'Turkey', 'Motor Company', 'Cars']:
             if man.endswith(suffix):
                 man = man.replace(" %s" % suffix, "")
         if man == "General Motors":
