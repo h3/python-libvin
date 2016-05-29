@@ -55,6 +55,14 @@ TEST_DATA = [
      'MODEL': 'MAZDA3', 'MAKE':  'Mazda', 'YEAR': 2010, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '267720', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=WDCYC7DF3FX109287&submit=Decode
+    # http://www.vindecoderz.com/EN/check-lookup/WDCYC7DF3FX109287
+    # http://www.autocalculator.org/VIN/WMI.aspx says WDC is Mercedes-Benz, hmm
+    # http://www.fueleconomy.gov/ws/rest/vehicle/menu/make?year=2015 spells it Mercedes-Benz, too, let's go with that
+    {'VIN': 'WDCYC7DF3FX109287', 'WMI': 'WDC', 'VDS': 'YC7DF3', 'VIS': 'FX109287',
+     'MODEL': 'G643', 'MAKE':  'Mercedes-Benz', 'YEAR': 2015, 'COUNTRY': 'Germany',
+     'REGION': 'europe', 'SEQUENTIAL_NUMBER': '109287', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=YV1902FH5D1796335&submit=Decode doesn't have model
     # http://www.vindecoderz.com/EN/check-lookup/YV1902FH5D1796335
     # http://www.fueleconomy.gov/ws/rest/vehicle/menu/model?year=2013&make=Volvo confirms XC60
