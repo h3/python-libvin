@@ -71,6 +71,13 @@ TEST_DATA = [
      'MODEL': 'Ranier', 'MAKE':  'Buick', 'YEAR': 2007, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '592644', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=5UXXW5C54F0791433&submit=Decode
+    # http://www.partesymas.com/VIN-Interpretation-Tables-2026.pdf showed 4-7 were the model,body,engine code
+    # http://www.autoredbook.com/ distinguished between the two X4 models
+    {'VIN': '5UXXW5C54F0791433', 'WMI': '5UX', 'VDS': 'XW5C54', 'VIS': 'F0791433',
+     'MODEL': 'X4 xDrive35i', 'MAKE':  'BMW', 'YEAR': 2015, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '791433', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=JA4AD2A3XEZ426420&submit=Decode didn't have model
     # https://www.mitsubishicars.com/owners/support/vin-information
     {'VIN': 'JA4AD2A3XEZ426420', 'WMI': 'JA4', 'VDS': 'AD2A3X', 'VIS': 'EZ426420',

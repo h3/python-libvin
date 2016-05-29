@@ -439,6 +439,7 @@ WMI_MAP = {
     '5N1': 'Nissan USA',
     '5NP': 'Hyundai USA',
     '5T': 'Toyota USA - trucks',
+    '5UX' : 'BMW',
     '6AB': 'MAN Australia',
     '6F4': 'Nissan Motor Company Australia',
     '6F5': 'Kenworth Australia',
