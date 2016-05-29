@@ -221,6 +221,7 @@ WMI_MAP = {
     'KNA': 'Kia',
     'KNB': 'Kia',
     'KNC': 'Kia',
+    'KND': 'Kia',
     'KNM': 'Renault Samsung',
     'KPA': 'Ssangyong',
     'KPT': 'Ssangyong',

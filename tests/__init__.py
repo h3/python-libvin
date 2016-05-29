@@ -174,6 +174,11 @@ TEST_DATA = [
      'MODEL': 'MAZDA3', 'MAKE':  'Mazda', 'YEAR': 2010, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '267720', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=KNDJT2A54D7883468&submit=Decode
+    {'VIN': 'KNDJT2A54D7883468', 'WMI': 'KND', 'VDS': 'JT2A54', 'VIS': 'D7883468',
+     'MODEL': 'Soul', 'MAKE':  'Kia', 'YEAR': 2013, 'COUNTRY': 'Korea (South)',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '883468', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=SCBEC9ZA1EC225243&submit=Decode
     # https://www.vinaudit.com/vin-search?vin=SCBEC9ZA1EC225243 got model slightly wrong
     # http://www.fueleconomy.gov/ws/rest/vehicle/menu/model?year=2014&make=Bentley confirms model name
