@@ -141,6 +141,7 @@ TEST_DATA = [
     # http://www.vindecoder.net/?vin=5GADS13S072592644&submit=Decode
     # https://service.gm.com/dealerworld/vincards/
     # https://service.gm.com/dealerworld/vincards/pdf/vincard07.pdf
+    # ftp://www-nrd.nhtsa.dot.gov/MfrMail/ORG5807.pdf
     {'VIN': '5GADS13S072592644', 'WMI': '5GA', 'VDS': 'DS13S0', 'VIS': '72592644',
      'MODEL': 'Ranier', 'MAKE':  'Buick', 'YEAR': 2007, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '592644', 'FEWER_THAN_500_PER_YEAR': False},
@@ -234,6 +235,12 @@ TEST_DATA = [
     {'VIN': 'VNKJTUD36FA838549', 'WMI': 'VNK', 'VDS': 'JTUD36', 'VIS': 'FA838549',
      'MODEL': 'Yaris', 'MAKE':  'Toyota', 'YEAR': 2015, 'COUNTRY': 'France',
      'REGION': 'europe', 'SEQUENTIAL_NUMBER': '838549', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # http://www.vindecoder.net/?vin=W04GW5EV0B1603732&submit=Decode
+    # http://gmvindecoder.net/vins/W04GW5EV0B1603732
+    {'VIN': 'W04GW5EV0B1603732', 'WMI': 'W04', 'VDS': 'GW5EV0', 'VIS': 'B1603732',
+     'MODEL': 'Regal', 'MAKE':  'Buick', 'YEAR': 2011, 'COUNTRY': 'Germany',
+     'REGION': 'europe', 'SEQUENTIAL_NUMBER': '603732', 'FEWER_THAN_500_PER_YEAR': False},
 
     # http://www.vindecoder.net/?vin=WA1EY74LX9D205644&submit=Decode
     # https://vindecoder.eu/check-vin/WA1EY74LX9D205644
