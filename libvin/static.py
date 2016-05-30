@@ -390,6 +390,7 @@ WMI_MAP = {
     '1YV': 'Mazda USA (AutoAlliance International)',
     '137': 'Hummer',
     '19U': 'Acura',
+    '19V': 'Acura',
     '19X': 'Honda',
     '2A4': 'Chrysler Canada',
     '2B3': 'Dodge Canada',

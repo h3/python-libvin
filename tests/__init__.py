@@ -49,6 +49,12 @@ TEST_DATA = [
      'MODEL': 'Escalade ESV', 'MAKE':  'Cadillac', 'YEAR': 2009, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '410242', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=19VDE2E5XEE644230&submit=Decode unchecked
+    # http://acurazine.com/forums/vindecoder.php?vin=19VDE2E5XEE644230
+    {'VIN': '19VDE2E5XEE644230', 'WMI': '19V', 'VDS': 'DE2E5X', 'VIS': 'EE644230',
+     'MODEL': 'ILX', 'MAKE':  'Acura', 'YEAR': 2014, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '644230', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=2A4GM684X6R632476&submit=Decode
     {'VIN': '2A4GM684X6R632476', 'WMI': '2A4', 'VDS': 'GM684X', 'VIS': '6R632476',
      'MODEL': 'Pacifica', 'MAKE':  'Chrysler', 'YEAR': 2006, 'COUNTRY': 'Canada',
