@@ -183,9 +183,9 @@ class Vin(object):
                 if brandcode == 'J':
                     make = 'Jeep'
         if man == 'Nissan':
-            # FIXME: this was gathered from a single test case, probably needs updating
-            brandcode = self.vin[3]
-            if brandcode == 'C':
+            # FIXME: this was gathered from just two test cases, probably needs updating
+            brandcode = self.vin[3:5]
+            if brandcode == 'CV':
                 make = 'Infiniti'
         return make
 
