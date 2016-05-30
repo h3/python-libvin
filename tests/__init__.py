@@ -143,6 +143,11 @@ TEST_DATA = [
      'MODEL': 'MKZ', 'MAKE':  'Lincoln', 'YEAR': 2011, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '262548', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=5FRYD3H26GB020813&submit=Decode unchecked
+    {'VIN': '5FRYD3H26GB020813', 'WMI': '5FR', 'VDS': 'YD3H26', 'VIS': 'GB020813',
+     'MODEL': 'MDX', 'MAKE':  'Acura', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '020813', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=5GADS13S072592644&submit=Decode
     # https://service.gm.com/dealerworld/vincards/
     # https://service.gm.com/dealerworld/vincards/pdf/vincard07.pdf
@@ -276,6 +281,12 @@ TEST_DATA = [
     {'VIN': 'WUADUAFG6AN410499', 'WMI': 'WUA', 'VDS': 'DUAFG6', 'VIS': 'AN410499',
      'MODEL': 'R8', 'MAKE':  'Audi', 'YEAR': 2010, 'COUNTRY': 'Germany',
      'REGION': 'europe', 'SEQUENTIAL_NUMBER': '410499', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # http://www.vindecoder.net/?vin=WVGAV7AX9BW549850&submit=Decode unchecked
+    # http://acurazine.com/forums/vindecoder.php?vin=WVGAV7AX9BW549850
+    {'VIN': 'WVGAV7AX9BW549850', 'WMI': 'WVG', 'VDS': 'AV7AX9', 'VIS': 'BW549850',
+     'MODEL': 'Tiguan', 'MAKE':  'Volkswagen', 'YEAR': 2011, 'COUNTRY': 'Germany',
+     'REGION': 'europe', 'SEQUENTIAL_NUMBER': '549850', 'FEWER_THAN_500_PER_YEAR': False},
 
     # http://www.vindecoder.net/?vin=YV1902FH5D1796335&submit=Decode doesn't have model
     # http://www.vindecoderz.com/EN/check-lookup/YV1902FH5D1796335
