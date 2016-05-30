@@ -30,6 +30,12 @@ class TestDecode(object):
             print "Testing: %s" % test['VIN']
             assert_equals(v.less_than_500_built_per_year, test['FEWER_THAN_500_PER_YEAR'])
 
+    def test_make(self):
+        for test in TEST_DATA:
+            v = Vin(test['VIN'])
+            print "Testing: %s, %s" % (test['VIN'], v.make)
+            assert_equals(v.make, test['MAKE'])
+
     def test_region(self):
         for test in TEST_DATA:
             v = Vin(test['VIN'])

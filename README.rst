@@ -3,7 +3,7 @@ python-libvin
 
 `libvin` is a python library which can decode Vehicle Identification Numbers.
 
-Currently it can exctract these informations:
+Currently it can extract these informations:
 
  * Country
  * If the vehicle was build before 2010
@@ -34,6 +34,8 @@ Low level API example
     Canada
     >>> v.year
     2006
+    >>> v.make
+    Honada
     >>> v.manufacturer
     Honada Canda
     >>> v.is_pre_2010
@@ -61,6 +63,10 @@ Methods
 | is_pre_2010                  | If the vehicle was build before 2010                           |
 +------------------------------+----------------------------------------------------------------+
 | less_than_500_built_per_year | If there is less than 500 of this vehicle model built per year |
++------------------------------+----------------------------------------------------------------+
+| make                         | Brand (e.g. Ford)                                              |
++------------------------------+----------------------------------------------------------------+
+| manufacturer                 | Company (e.g. Ford Motor Company)                              |
 +------------------------------+----------------------------------------------------------------+
 | region                       | Region                                                         |
 +------------------------------+----------------------------------------------------------------+

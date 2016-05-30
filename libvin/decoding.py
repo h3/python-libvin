@@ -1,6 +1,7 @@
 """
 libvin - VIN Vehicle information number checker
 (c) Copyright 2012 Maxime Haineault <max@motion-m.ca>
+(c) Copyright 2016 Dan Kegel <dank@kegel.com>
 """
 
 from libvin.static import *
@@ -17,7 +18,7 @@ class Vin(object):
         countries = WORLD_MANUFACTURER_MAP[self.vin[0]]['countries']
 
         for codes in countries:
-            if self.vin[0] in codes:
+            if self.vin[1] in codes:
                 return countries[codes]
 
         return 'Unknown'
@@ -143,6 +144,54 @@ class Vin(object):
         if wmi[:2] in WMI_MAP:
             return WMI_MAP[wmi[:2]]
         return 'Unknown'
+
+    @property
+    def make(self):
+        '''
+        This is like manufacturer, but without country or other suffixes, and should be short common name.
+        Should be same as values from e.g. http://www.fueleconomy.gov/ws/rest/vehicle/menu/make?year=2012
+        Should probably have a static table instead of doing late fixup like this.
+        '''
+        man = self.manufacturer
+        for suffix in [
+           'Canada',
+           'Cars',
+           'France',
+           'Hungary',
+           'Mexico',
+           'Motor Company',
+           'Truck USA',
+           'Turkey',
+           'USA',
+           'USA - trucks',
+           ]:
+             if man.endswith(suffix):
+                man = man.replace(" %s" % suffix, "")
+        if man == "General Motors":
+            return "GMC"
+        make = man
+        # 2012 and later: first 3 positions became overloaded, some 'make' aka brand info moved further in; see
+        # https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/Chrysler/VIN_Codes
+        # http://www.allpar.com/mopar/vin-decoder.html
+        if self.year > 2011:
+            if man == 'Chrysler':
+                brandcode = self.vin[4]
+                if brandcode == 'D':
+                    make = 'Dodge'
+                if brandcode == 'F':
+                    make = 'Fiat'
+                if brandcode == 'J':
+                    make = 'Jeep'
+        if man == 'Nissan':
+            # FIXME: this was gathered from just four test cases, probably needs updating
+            brandcode = self.vin[3:5]
+            if brandcode == 'CV':
+                make = 'Infiniti'
+            if brandcode == 'BS':
+                make = 'Infiniti'
+            if brandcode == 'CS':
+                make = 'Infiniti'
+        return make
 
     @property
     def year(self):
