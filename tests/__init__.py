@@ -10,6 +10,11 @@ TEST_DATA = [
      'MODEL': 'Grand Cherokee', 'MAKE':  'Jeep', 'YEAR': 2014, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '476429', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=1D7RB1CP8BS798034&submit=Decode
+    {'VIN': '1D7RB1CP8BS798034', 'WMI': '1D7', 'VDS': 'RB1CP8', 'VIS': 'BS798034',
+     'MODEL': 'Ram 1500', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '798034', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=1D7RB1CT1BS488952&submit=Decode
     {'VIN': '1D7RB1CT1BS488952', 'WMI': '1D7', 'VDS': 'RB1CT1', 'VIS': 'BS488952',
      'MODEL': 'Ram 1500', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'United States',
@@ -149,6 +154,11 @@ TEST_DATA = [
      'MODEL': 'MKZ', 'MAKE':  'Lincoln', 'YEAR': 2011, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '262548', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.vindecoder.net/?vin=4A31K3DT4CE403200&submit=Decode
+    {'VIN': '4A31K3DT4CE403200', 'WMI': '4A3', 'VDS': '1K3DT4', 'VIS': 'CE403200',
+     'MODEL': 'Eclipse', 'MAKE':  'Mitsubishi', 'YEAR': 2012, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '403200', 'FEWER_THAN_500_PER_YEAR': False},
+
     # http://www.vindecoder.net/?vin=5FRYD3H26GB020813&submit=Decode unchecked
     {'VIN': '5FRYD3H26GB020813', 'WMI': '5FR', 'VDS': 'YD3H26', 'VIS': 'GB020813',
      'MODEL': 'MDX', 'MAKE':  'Acura', 'YEAR': 2016, 'COUNTRY': 'United States',
@@ -161,6 +171,11 @@ TEST_DATA = [
     {'VIN': '5GADS13S072592644', 'WMI': '5GA', 'VDS': 'DS13S0', 'VIS': '72592644',
      'MODEL': 'Ranier', 'MAKE':  'Buick', 'YEAR': 2007, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '592644', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # http://www.vindecoder.net/?vin=5GNRNGEE9A8215904&submit=Decode
+    {'VIN': '5GNRNGEE9A8215904', 'WMI': '5GN', 'VDS': 'RNGEE9', 'VIS': 'A8215904',
+     'MODEL': 'H3T', 'MAKE':  'Hummer', 'YEAR': 2010, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '215904', 'FEWER_THAN_500_PER_YEAR': False},
 
     # http://www.vindecoder.net/?vin=5J6TF1H33CL339137&submit=Decode
     {'VIN': '5J6TF1H33CL339137', 'WMI': '5J6', 'VDS': 'TF1H33', 'VIS': 'CL339137',
@@ -211,6 +226,16 @@ TEST_DATA = [
     {'VIN': 'JN1AZ44EX9M403788', 'WMI': 'JN1', 'VDS': 'AZ44EX', 'VIS': '9M403788',
      'MODEL': '370Z', 'MAKE':  'Nissan', 'YEAR': 2009, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '403788', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # http://www.vindecoder.net/?vin=JN8BS1MW7EM920252&submit=Decode
+    {'VIN': 'JN8BS1MW7EM920252', 'WMI': 'JN8', 'VDS': 'BS1MW7', 'VIS': 'EM920252',
+     'MODEL': 'QX70', 'MAKE':  'Infiniti', 'YEAR': 2014, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '920252', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # http://www.vindecoder.net/?vin=JN8CS1MU0DM236239&submit=Decode
+    {'VIN': 'JN8CS1MU0DM236239', 'WMI': 'JN8', 'VDS': 'CS1MU0', 'VIS': 'DM236239',
+     'MODEL': 'FX37', 'MAKE':  'Infiniti', 'YEAR': 2013, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '236239', 'FEWER_THAN_500_PER_YEAR': False},
 
     # http://www.vindecoder.net/?vin=JTHBW1GG7D2369737&submit=Decode has no model
     # http://www.autocalculator.org/VIN/WMI.aspx agrees JTH is Lexus
