@@ -153,8 +153,26 @@ European Union & North America (<500 vehicles/year)
     World Manufacturer Idendified
 
 
+Note to contributors
+--------------------
+
+When submitting a bug fix, please add an entry to TEST_DATA in tests/__init__.py
+that tickles the bug you're fixing.  The following free VIN decoder services
+may come in handy when preparing test cases:
+ * http://vpic.nhtsa.dot.gov/api/
+ * http://vpic.nhtsa.dot.gov/decoder/
+
+To find all VIN coding guides from a manufacturer, visit
+http://vpic.nhtsa.dot.gov/mid/
+check the "Part 565" checkbox, enter part of a manufacturer's name, leave DBA blank,
+enter a % wildcard for City, State, Country, and Filename, and click
+Search.  The resulting filenames are cryptic, and you have to slog
+through a lot of files, but the data is pure gold.
+
 References
 ----------
 
  * http://en.wikipedia.org/wiki/Vehicle_Identification_Number
  * http://www.nisrinc.com/include/common/VIN.html
+ * http://vpic.nhtsa.dot.gov
+ * http://vpic.nhtsa.dot.gov/mid/
