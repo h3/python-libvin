@@ -15,10 +15,9 @@ Currently it can extract these informations:
  * World Manufacturer Identifier
  * Year of the vehicle model
 
-This is a work in progress and my only source of information about the many VIN standards
-is a half baked Wikipedia article. So don't expect it to be perfect. 
-
-Feel free to contribute !
+This is a work in progress -- model lookup was only about 90% accurate
+in an informal test -- yet appears to be the most complete open source
+implementation of vin lookup available.  Feel free to contribute !
 
 Low level API example
 ---------------------
@@ -35,9 +34,9 @@ Low level API example
     >>> v.year
     2006
     >>> v.make
-    Honada
+    Chrysler
     >>> v.manufacturer
-    Honada Canda
+    Chrysler Canada
     >>> v.is_pre_2010
     True
     >>> v.wmi
@@ -156,18 +155,37 @@ European Union & North America (<500 vehicles/year)
 Note to contributors
 --------------------
 
-When submitting a bug fix, please add an entry to TEST_DATA in tests/__init__.py
-that tickles the bug you're fixing.  The following free VIN decoder services
-may come in handy when preparing test cases:
+When submitting a bug fix, please add an entry to TEST_DATA in
+tests/__init__.py that tickles the bug you're fixing, and make
+sure the test suite passes.
+
+To run the test suite with nose::
+
+    $ pip install nose
+    $ nosetests
+
+To run the test suite with nose2::
+
+    $ pip install nose2
+    $ nose2
+
+Either should output a few test status lines, then end with something like::
+
+    Ran 11 tests in 0.007s
+
+    OK
+
+The following free VIN decoder services may come in handy when preparing
+test cases, at least for cars sold in the United States.
  * http://vpic.nhtsa.dot.gov/api/
  * http://vpic.nhtsa.dot.gov/decoder/
 
 To find all VIN coding guides from a manufacturer, visit
-http://vpic.nhtsa.dot.gov/mid/
-check the "Part 565" checkbox, enter part of a manufacturer's name, leave DBA blank,
-enter a % wildcard for City, State, Country, and Filename, and click
-Search.  The resulting filenames are cryptic, and you have to slog
-through a lot of files, but the data is pure gold.
+ * http://vpic.nhtsa.dot.gov/mid/
+Then check the "Part 565" checkbox, enter part of a manufacturer's
+name, leave DBA blank, enter a % wildcard for City, State, Country,
+and Filename, and click Search.
+The resulting filenames are cryptic, and you have to slog
 
 References
 ----------
