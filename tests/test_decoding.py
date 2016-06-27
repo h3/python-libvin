@@ -6,6 +6,14 @@ from libvin.static import *
 
 from . import TEST_DATA
 
+# To run tests that depend on network, do e.g. 'NETWORK_OK=1 nose2'
+import os
+if 'NETWORK_OK' in os.environ:
+    from time import sleep
+    import requests_cache
+    # Cache responses for 7 days to be kind to nhtsa's server
+    requests_cache.install_cache('libvin_tests_cache', expire_after=7*24*60*60)
+    from libvin.nhtsa import nhtsa_decode
 
 class TestDecode(object):
 
@@ -35,6 +43,14 @@ class TestDecode(object):
             v = Vin(test['VIN'])
             print "Testing: %s, %s" % (test['VIN'], v.make)
             assert_equals(v.make, test['MAKE'])
+            if 'NETWORK_OK' in os.environ:
+                # Verify that our decoded make is the same as NHTSA's.
+                n = nhtsa_decode(test['VIN'])
+                if n['ErrorCode'][0] == '0':
+                    assert_equals(v.make.upper(), n['Make'])
+                # Avoid swamping nhtsa server when cache empty.
+                # FIXME: Using requests_cache throttling would be better, wouldn't slow down cache full case.
+                sleep(0.05)
 
     def test_region(self):
         for test in TEST_DATA:
