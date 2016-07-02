@@ -1,3 +1,11 @@
+# To run tests that depend on network, do e.g. 'NETWORK_OK=1 nose2'
+import os
+if 'NETWORK_OK' in os.environ:
+    import requests
+    import requests_cache
+    # Cache responses for 7 days to be kind to servers (and rerun quickly)
+    requests_cache.install_cache('libvin_tests_cache', expire_after=7*24*60*60)
+
 # Sorted alphabetically by VIN
 TEST_DATA = [
     # http://www.vindecoder.net/?vin=137ZA903X1E412677&submit=Decode unchecked

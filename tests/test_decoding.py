@@ -10,9 +10,6 @@ from . import TEST_DATA
 import os
 if 'NETWORK_OK' in os.environ:
     from time import sleep
-    import requests_cache
-    # Cache responses for 7 days to be kind to nhtsa's server
-    requests_cache.install_cache('libvin_tests_cache', expire_after=7*24*60*60)
     from libvin.nhtsa import nhtsa_decode
 
 class TestDecode(object):
