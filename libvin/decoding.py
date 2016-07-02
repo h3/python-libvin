@@ -4,7 +4,7 @@ libvin - VIN Vehicle information number checker
 (c) Copyright 2016 Dan Kegel <dank@kegel.com>
 """
 
-from libvin.static import *
+from static import *
 
 class Vin(object):
     def __init__(self, vin):
