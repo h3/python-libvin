@@ -369,6 +369,7 @@ WMI_MAP = {
     '1G4': 'Buick USA',
     '1G6': 'Cadillac USA',
     '1GM': 'Pontiac USA',
+    '1GN': 'Chevrolet USA',
     '1G8': 'Saturn USA',
     '1GY': 'Cadillac',
     '1H': 'Honda USA',
