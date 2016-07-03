@@ -191,6 +191,9 @@ class Vin(object):
                 make = 'Infiniti'
             if brandcode == 'CS':
                 make = 'Infiniti'
+        if man == 'Renault Samsung':
+            # FIXME: they build other makes, too
+            make = 'Nissan'
         return make
 
     @property
