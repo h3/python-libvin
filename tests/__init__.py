@@ -198,6 +198,17 @@ TEST_DATA = [
      'MODEL': 'MKZ', 'MAKE':  'Lincoln', 'YEAR': 2011, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '262548', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # Can't tell transmission from vin, so pick one at random :-(
+    # https://vpic.nhtsa.dot.gov/mid/home/displayfile/6089
+    # http://www.fueleconomy.gov/ws/rest/vehicle/36534
+    ## http://www.fueleconomy.gov/ws/rest/vehicle/36535
+    {'VIN': '3MZBM1K72GM303265', 'WMI': '3MZ', 'VDS': 'BM1K72', 'VIS': 'GM303265',
+     'MODEL': 'Mazda3', 'MAKE': 'Mazda', 'YEAR': 2016, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '303265', 'FEWER_THAN_500_PER_YEAR': False,
+     'epa.id' : '36534', 'epa.co2TailpipeGpm': '269.0', 'epa.model' : '3 5-Door', 'epa.trim' : 'Man 6-spd, 4 cyl, 2.0 L, SIDI',
+     #'epa.id' : '36535', 'epa.co2TailpipeGpm': '265.0', 'epa.model' : '3 5-Door', 'epa.trim' : 'Auto (S6), 4 cyl, 2.0 L, SIDI',
+    },
+
     # http://www.vindecoder.net/?vin=4A31K3DT4CE403200&submit=Decode
     {'VIN': '4A31K3DT4CE403200', 'WMI': '4A3', 'VDS': '1K3DT4', 'VIS': 'CE403200',
      'MODEL': 'Eclipse', 'MAKE':  'Mitsubishi', 'YEAR': 2012, 'COUNTRY': 'United States',
