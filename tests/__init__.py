@@ -159,6 +159,14 @@ TEST_DATA = [
      'MODEL': 'Ram 1500 Pickup', 'MAKE':  'Dodge', 'YEAR': 2012, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '104778', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/3CZRU5H35GM739695
+    # http://www.fueleconomy.gov/ws/rest/vehicle/35999
+    {'VIN': '3CZRU5H35GM739695', 'WMI': '3CZ', 'VDS': 'RU5H35', 'VIS': 'GM739695',
+     'MODEL': 'HR-V', 'MAKE': 'Honda', 'YEAR': 2016, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '739695', 'FEWER_THAN_500_PER_YEAR': False,
+     'epa.id' : '35999', 'epa.co2TailpipeGpm': '285.0', 'epa.model' : 'HR-V 2WD', 'epa.trim' : 'Auto (variable gear ratios), 4 cyl, 1.8 L',
+    },
+
     # http://www.vindecoder.net/?vin=3D4PH6FV5AT152960&submit=Decode
     # http://www.rambodybuilder.com/2010/docs/intro/vin.pdf
     {'VIN': '3D4PH6FV5AT152960', 'WMI': '3D4', 'VDS': 'PH6FV5', 'VIS': 'AT152960',
