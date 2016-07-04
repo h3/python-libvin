@@ -194,6 +194,8 @@ class Vin(object):
         if man == 'Renault Samsung':
             # FIXME: they build other makes, too
             make = 'Nissan'
+        if man == 'Subaru-Isuzu Automotive':
+            make = 'Subaru'
         return make
 
     @property
