@@ -267,6 +267,7 @@ TEST_DATA = [
      'MODEL': 'M', 'MAKE':  'BMW', 'YEAR': 2006, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '421092', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/mid/home/displayfile/6197 "BMW Model Year 2015 Decipherment of VINs in Accordance with Part 565"
     # http://www.vindecoder.net/?vin=5UXXW5C54F0791433&submit=Decode
     # http://www.partesymas.com/VIN-Interpretation-Tables-2026.pdf showed 4-7 were the model,body,engine code
     # http://www.autoredbook.com/ distinguished between the two X4 models
