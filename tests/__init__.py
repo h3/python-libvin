@@ -372,6 +372,12 @@ TEST_DATA = [
      'MODEL': 'Outlander ES', 'MAKE':  'Mitsubishi', 'YEAR': 2014, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '426420', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/JF2SJGVC3GH555328
+    {'VIN': 'JF2SJGVC3GH555328', 'WMI': 'JF2', 'VDS': 'SJGVC3', 'VIS': 'GH555328',
+     'MODEL': 'Forester', 'MAKE': 'Subaru', 'YEAR': 2016, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '555328', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=JH4CW2H53BC567925&submit=Decode
     {'VIN': 'JH4CW2H53BC567925', 'WMI': 'JH4', 'VDS': 'CW2H53', 'VIS': 'BC567925',
      'MODEL': 'TSX', 'MAKE':  'Acura', 'YEAR': 2011, 'COUNTRY': 'Japan',

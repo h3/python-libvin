@@ -171,34 +171,35 @@ class Vin(object):
                 man = man.replace(" %s" % suffix, "")
         if man == "General Motors":
             return "GMC"
-        make = man
-        # 2012 and later: first 3 positions became overloaded, some 'make' aka brand info moved further in; see
-        # https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/Chrysler/VIN_Codes
-        # http://www.allpar.com/mopar/vin-decoder.html
-        if self.year > 2011:
-            if man == 'Chrysler':
+        if man == 'Chrysler':
+            # 2012 and later: first 3 positions became overloaded, some 'make' aka brand info moved further in; see
+            # https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/Chrysler/VIN_Codes
+            # http://www.allpar.com/mopar/vin-decoder.html
+            if self.year > 2011:
                 brandcode = self.vin[4]
                 if brandcode == 'D':
-                    make = 'Dodge'
+                    return 'Dodge'
                 if brandcode == 'F':
-                    make = 'Fiat'
+                    return 'Fiat'
                 if brandcode == 'J':
-                    make = 'Jeep'
+                    return 'Jeep'
+        if man == "Fuji Heavy Industries (Subaru)":
+            return 'Subaru'
         if man == 'Nissan':
             # FIXME: this was gathered from just four test cases, probably needs updating
             brandcode = self.vin[3:5]
             if brandcode == 'CV':
-                make = 'Infiniti'
+                return 'Infiniti'
             if brandcode == 'BS':
-                make = 'Infiniti'
+                return 'Infiniti'
             if brandcode == 'CS':
-                make = 'Infiniti'
+                return 'Infiniti'
         if man == 'Renault Samsung':
             # FIXME: they build other makes, too
-            make = 'Nissan'
+            return 'Nissan'
         if man == 'Subaru-Isuzu Automotive':
-            make = 'Subaru'
-        return make
+            return 'Subaru'
+        return man
 
     @property
     def year(self):
