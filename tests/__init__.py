@@ -148,6 +148,12 @@ TEST_DATA = [
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '202392', 'FEWER_THAN_500_PER_YEAR': False,
     },
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/2GNFLPE55C6105926
+    {'VIN': '2GNFLPE55C6105926', 'WMI': '2GN', 'VDS': 'FLPE55', 'VIS': 'C6105926',
+     'MODEL': 'Equinox', 'MAKE': 'Chevrolet', 'YEAR': 2012, 'COUNTRY': 'Canada',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '105926', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=2G61W5S83E9422251&submit=Decode
     # ftp://safercar.gov/MfrMail/ORG7595.pdf "General Motors LLC 2013 Vehicle Identification Numbering Standard"
     {'VIN': '2G61W5S83E9422251', 'WMI': '2G6', 'VDS': '1W5S83', 'VIS': 'E9422251',
@@ -223,6 +229,12 @@ TEST_DATA = [
     {'VIN': '3D73Y3CL0BG113805', 'WMI': '3D7', 'VDS': '3Y3CL0', 'VIS': 'BG113805',
      'MODEL': 'Ram 3500', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '113805', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/3GCEC13078G157479
+    {'VIN': '3GCEC13078G157479', 'WMI': '3GC', 'VDS': 'EC1307', 'VIS': '8G157479',
+     'MODEL': 'Silverado', 'MAKE': 'Chevrolet', 'YEAR': 2008, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '157479', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # http://www.fueleconomy.gov/ws/rest/vehicle/23047
     {'VIN': '3GNFK16387G115163', 'WMI': '3GN', 'VDS': 'FK1638', 'VIS': '7G115163',
