@@ -412,6 +412,7 @@ WMI_MAP = {
     '2FV': 'Freightliner',
     '2FZ': 'Sterling',
     '2G': 'General Motors Canada',
+    '2GC': 'Chevrolet Canada',
     '2G1': 'Chevrolet Canada',
     '2G2': 'Pontiac Canada',
     '2G3': 'Oldsmobile Canada',
