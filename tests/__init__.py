@@ -35,6 +35,23 @@ TEST_DATA = [
      'MODEL': 'Ram 1500', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '488952', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # Breadcrumbs for how libvin/epa.py looks up the epa results:
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1GB0C4EGXGZ280783
+    # http://www.fueleconomy.gov/ws/rest/vehicle/menu/model?year=2016&make=Chevrolet
+    # http://www.fueleconomy.gov/ws/rest/vehicle/menu/options?year=2016&make=Chevrolet&model=Silverado%20C15%202WD
+    # There is ambiguity, so all possibly matching epa variants for this epa model are listed:
+    # http://www.fueleconomy.gov/ws/rest/vehicle/37007
+    ## http://www.fueleconomy.gov/ws/rest/vehicle/37006
+    ## http://www.fueleconomy.gov/ws/rest/vehicle/37008
+    {'VIN': '1GB0C4EGXGZ280783', 'WMI': '1GB', 'VDS': '0C4EGX', 'VIS': 'GZ280783',
+     'MODEL': 'Silverado', 'MAKE': 'Chevrolet', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '280783', 'FEWER_THAN_500_PER_YEAR': False,
+     'nhtsa.trim': '', 'nhtsa.series': '',
+     'epa.id' : '37007', 'epa.co2TailpipeGpm': '493.0', 'epa.model' : 'Silverado C15 2WD', 'epa.trim' : 'Auto 8-spd, 8 cyl, 5.3 L, SIDI',
+     #'epa.id' : '37006', 'epa.co2TailpipeGpm': '480.0', 'epa.model' : 'Silverado C15 2WD', 'epa.trim' : 'Auto 6-spd, 8 cyl, 5.3 L, SIDI',
+     #'epa.id' : '37008', 'epa.co2TailpipeGpm': '527.0', 'epa.model' : 'Silverado C15 2WD', 'epa.trim' : 'Auto 8-spd, 8 cyl, 6.2 L, SIDI',
+    },
+
     # http://www.fueleconomy.gov/ws/rest/vehicle/36354
     {'VIN': '1GNKRHKD2GJ223195', 'WMI': '1GN', 'VDS': 'KRHKD2', 'VIS': 'GJ223195',
      'MODEL': 'Traverse AWD', 'MAKE': 'Chevrolet', 'YEAR': 2016, 'COUNTRY': 'United States',

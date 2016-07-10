@@ -362,6 +362,7 @@ WMI_MAP = {
     '1FV': 'Freightliner',
     '1F9': 'FWD Corp.',
     '1G': 'General Motors USA',
+    '1GB': 'Chevrolet USA',
     '1GC': 'Chevrolet Truck USA',
     '1GT': 'GMC Truck USA',
     '1G1': 'Chevrolet USA',
