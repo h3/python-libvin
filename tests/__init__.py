@@ -59,6 +59,12 @@ TEST_DATA = [
      'epa.id' : '36354', 'epa.co2TailpipeGpm': '519.0', 'epa.model' : 'Traverse AWD', 'epa.trim' : 'Auto 6-spd, 6 cyl, 3.6 L',
     },
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1N4BL3AP5DN508203
+    {'VIN': '1N4BL3AP5DN508203', 'WMI': '1N4', 'VDS': 'BL3AP5', 'VIS': 'DN508203',
+     'MODEL': 'Altima', 'MAKE': 'Nissan', 'YEAR': 2013, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '508203', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=19UUA65694A043249&submit=Decode
     # http://acurazine.com/forums/vindecoder.php?vin=19UUA65694A043249
     {'VIN': '19UUA65694A043249', 'WMI': '19U', 'VDS': 'UA6569', 'VIS': '4A043249',

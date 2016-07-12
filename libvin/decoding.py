@@ -192,8 +192,8 @@ class Vin(object):
             # ftp://safercar.gov/MfrMail/ORG6337.pdf "MY11 Nissan VIN Coding System"
             # says that plus Infiniti if offset 4 + 5 are S1.  (Nissan Rogue is S5.)
             # ftp://ftp.nhtsa.dot.gov/mfrmail/ORG7846.pdf "MY13 Nissan VIN Coding System"
-            # says that plus Infiniti if offset 4 is L.
-            if self.vin[4] in "JVYL" or self.vin[4:6] == 'S1':
+            # says that plus Infiniti if offset 4 + 5 are L0.
+            if self.vin[4] in "JVY" or self.vin[4:6] == 'S1' or self.vin[4:6] == 'L0':
                 return 'Infiniti'
         if man == 'Renault Samsung':
             # FIXME: they build other makes, too
