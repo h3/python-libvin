@@ -294,6 +294,12 @@ TEST_DATA = [
      'epa.id' : '36406', 'epa.co2TailpipeGpm': '298.0', 'epa.model' : 'Legacy AWD', 'epa.trim' : 'Auto(AV-S6), 4 cyl, 2.5 L',
     },
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/55SWF4JB6GU104745
+    {'VIN': '55SWF4JB6GU104745', 'WMI': '55S', 'VDS': 'WF4JB6', 'VIS': 'GU104745',
+     'MODEL': 'C-Class', 'MAKE': 'Mercedes-Benz', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '104745', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=5FRYD3H26GB020813&submit=Decode unchecked
     {'VIN': '5FRYD3H26GB020813', 'WMI': '5FR', 'VDS': 'YD3H26', 'VIS': 'GB020813',
      'MODEL': 'MDX', 'MAKE':  'Acura', 'YEAR': 2016, 'COUNTRY': 'United States',
