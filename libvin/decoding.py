@@ -186,13 +186,14 @@ class Vin(object):
         if man == "Fuji Heavy Industries (Subaru)":
             return 'Subaru'
         if man == 'Nissan':
-            # FIXME: this was gathered from just four test cases, probably needs updating
-            brandcode = self.vin[3:5]
-            if brandcode == 'CV':
-                return 'Infiniti'
-            if brandcode == 'BS':
-                return 'Infiniti'
-            if brandcode == 'CS':
+            # ftp://safercar.gov/MfrMail/ORG7377.pdf "MY12 Nissan VIN Coding System"
+            # https://vpic.nhtsa.dot.gov/mid/home/displayfile/29173 "MY16 Nissan VIN Coding System"
+            # say Ininiti if offset 4 is [JVY], Nissan otherwise.
+            # ftp://safercar.gov/MfrMail/ORG6337.pdf "MY11 Nissan VIN Coding System"
+            # says that plus Infiniti if offset 4 + 5 are S1.  (Nissan Rogue is S5.)
+            # ftp://ftp.nhtsa.dot.gov/mfrmail/ORG7846.pdf "MY13 Nissan VIN Coding System"
+            # says that plus Infiniti if offset 4 is L.
+            if self.vin[4] in "JVYL" or self.vin[4:6] == 'S1':
                 return 'Infiniti'
         if man == 'Renault Samsung':
             # FIXME: they build other makes, too

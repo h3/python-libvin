@@ -334,6 +334,12 @@ TEST_DATA = [
      'MODEL': 'RDX', 'MAKE':  'Acura', 'YEAR': 2012, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '348655', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/5N1AL0MM1DC339116
+    {'VIN': '5N1AL0MM1DC339116', 'WMI': '5N1', 'VDS': 'AL0MM1', 'VIS': 'DC339116',
+     'MODEL': 'JX35', 'MAKE': 'Infiniti', 'YEAR': 2013, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '339116', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=5N1CR2MN6EC875492&submit=Decode
     {'VIN': '5N1CR2MN6EC875492', 'WMI': '5N1', 'VDS': 'CR2MN6', 'VIS': 'EC875492',
      'MODEL': 'Pathfinder', 'MAKE':  'Nissan', 'YEAR': 2014, 'COUNTRY': 'United States',
@@ -388,6 +394,12 @@ TEST_DATA = [
     {'VIN': 'JN1CV6FE4EM164066', 'WMI': 'JN1', 'VDS': 'CV6FE4', 'VIS': 'EM164066',
      'MODEL': 'Q60 Convertible', 'MAKE':  'Infiniti', 'YEAR': 2014, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '164066', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/JN1AJ0HP7CM401080
+    {'VIN': 'JN1AJ0HP7CM401080', 'WMI': 'JN1', 'VDS': 'AJ0HP7', 'VIS': 'CM401080',
+     'MODEL': 'EX35', 'MAKE': 'Infiniti', 'YEAR': 2012, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '401080', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # And another random JN1 that isn't Infiniti
     # http://nissanvindecoder.com/vins/jn1az44ex9m403788
