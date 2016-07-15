@@ -486,6 +486,7 @@ WMI_MAP = {
     '5XX' : 'Kia',
     '5YF' : 'Toyota',
     '55S' : 'Mercedes-Benz',
+    '58A' : 'Lexus',
     '6AB': 'MAN Australia',
     '6F4': 'Nissan Motor Company Australia',
     '6F5': 'Kenworth Australia',
