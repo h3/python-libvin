@@ -427,6 +427,7 @@ WMI_MAP = {
     '2M': 'Mercury',
     '2P3': 'Plymouth Canada',
     '2T': 'Toyota Canada',
+    '2T2': 'Lexus Canada',
     '2V4': 'Volkswagen Canada',
     '2WK': 'Western Star',
     '2WL': 'Western Star',

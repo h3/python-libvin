@@ -179,6 +179,12 @@ TEST_DATA = [
      'epa.id' : '22123', 'epa.co2TailpipeGpm': '329.1', 'epa.model' : 'Matrix', 'epa.trim' : 'Auto 4-spd, 4 cyl, 1.8 L',
     },
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/2T2BGMCA0GC004299
+    {'VIN': '2T2BGMCA0GC004299', 'WMI': '2T2', 'VDS': 'BGMCA0', 'VIS': 'GC004299',
+     'MODEL': 'RX', 'MAKE': 'Lexus', 'YEAR': 2016, 'COUNTRY': 'Canada',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '004299', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vin-decoder.org/details?vin=3C3CFFCR9FT528063
     # http://www.fiat500usa.com/2013/08/decoding-fiat-500-vin.html
     # Chrysler Passenger Car Vehicle Identification Number Code Guide
