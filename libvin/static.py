@@ -455,6 +455,7 @@ WMI_MAP = {
     '4A3': 'Mitsubishi',
     '4A4': 'Mitsubishi',
     '4F': 'Mazda USA',
+    '4JG': 'Mercedes-Benz',
     '4M': 'Mercury',
     '4S': 'Subaru-Isuzu Automotive',
     '4T': 'Toyota',
