@@ -99,6 +99,12 @@ TEST_DATA = [
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': 'M33844', 'FEWER_THAN_500_PER_YEAR': False,
     },
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1ZVBP8CF4E5242560
+    {'VIN': '1ZVBP8CF4E5242560', 'WMI': '1ZV', 'VDS': 'BP8CF4', 'VIS': 'E5242560',
+     'MODEL': 'Mustang', 'MAKE': 'Ford', 'YEAR': 2014, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '242560', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=19VDE2E5XEE644230&submit=Decode unchecked
     # http://acurazine.com/forums/vindecoder.php?vin=19VDE2E5XEE644230
     {'VIN': '19VDE2E5XEE644230', 'WMI': '19V', 'VDS': 'DE2E5X', 'VIS': 'EE644230',
