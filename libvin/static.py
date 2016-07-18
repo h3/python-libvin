@@ -496,6 +496,7 @@ WMI_MAP = {
     '8AK': 'Suzuki Argentina',
     '8AJ': 'Toyota Argentina',
     '8AW': 'Volkswagen Argentina',
+    '8BR': 'Mercedes-Benz Argentina',
     '93U': 'Audi Brazil',
     '9BG': 'Chevrolet Brazil',
     '935': 'Citroen Brazil',

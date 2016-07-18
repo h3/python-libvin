@@ -154,6 +154,7 @@ class Vin(object):
         '''
         man = self.manufacturer
         for suffix in [
+           'Argentina',
            'Canada',
            'Cars',
            'France',
