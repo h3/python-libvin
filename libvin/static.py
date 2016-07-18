@@ -325,6 +325,7 @@ WMI_MAP = {
     'XL9': 'Spyker',
     'XMC': 'Mitsubishi (NedCar)',
     'XTA': 'Lada/AutoVaz (Russia)',
+    'YH4': 'Fisker',
     'YK1': 'Saab',
     'YS2': 'Scania AB',
     'YS3': 'Saab',
