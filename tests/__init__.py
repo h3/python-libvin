@@ -270,6 +270,12 @@ TEST_DATA = [
      #'epa.id' : '36535', 'epa.co2TailpipeGpm': '265.0', 'epa.model' : '3 5-Door', 'epa.trim' : 'Auto (S6), 4 cyl, 2.0 L, SIDI',
     },
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/3TMCZ5AN2GM040551
+    {'VIN': '3TMCZ5AN2GM040551', 'WMI': '3TM', 'VDS': 'CZ5AN2', 'VIS': 'GM040551',
+     'MODEL': 'Tacoma', 'MAKE': 'Toyota', 'YEAR': 2016, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '040551', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=4A31K3DT4CE403200&submit=Decode
     {'VIN': '4A31K3DT4CE403200', 'WMI': '4A3', 'VDS': '1K3DT4', 'VIS': 'CE403200',
      'MODEL': 'Eclipse', 'MAKE':  'Mitsubishi', 'YEAR': 2012, 'COUNTRY': 'United States',

@@ -450,6 +450,7 @@ WMI_MAP = {
     '3LN': 'Lincoln',
     '3N': 'Nissan Mexico',
     '3P3': 'Plymouth Mexico',
+    '3TM': 'Toyota Mexico',
     '3VW': 'Volkswagen Mexico',
     '4A3': 'Mitsubishi',
     '4A4': 'Mitsubishi',
