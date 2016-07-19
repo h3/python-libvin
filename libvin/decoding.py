@@ -165,6 +165,7 @@ class Vin(object):
            'Turkey',
            'USA',
            'USA - trucks',
+           'USA (AutoAlliance International)',
            ]:
              if man.endswith(suffix):
                 man = man.replace(" %s" % suffix, "")

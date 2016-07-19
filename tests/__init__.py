@@ -93,6 +93,12 @@ TEST_DATA = [
      'MODEL': 'Escalade ESV', 'MAKE':  'Cadillac', 'YEAR': 2009, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '410242', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1YVHZ8DH0C5M33844
+    {'VIN': '1YVHZ8DH0C5M33844', 'WMI': '1YV', 'VDS': 'HZ8DH0', 'VIS': 'C5M33844',
+     'MODEL': 'Mazda6', 'MAKE': 'Mazda', 'YEAR': 2012, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': 'M33844', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=19VDE2E5XEE644230&submit=Decode unchecked
     # http://acurazine.com/forums/vindecoder.php?vin=19VDE2E5XEE644230
     {'VIN': '19VDE2E5XEE644230', 'WMI': '19V', 'VDS': 'DE2E5X', 'VIS': 'EE644230',
