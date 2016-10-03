@@ -17,7 +17,6 @@ TEST_DATA = [
     {'VIN': '19XFC1F7XGE028370', 'WMI': '19X', 'VDS': 'FC1F7X', 'VIS': 'GE028370',
      'MODEL': 'Civic', 'MAKE': 'Honda', 'YEAR': 2016, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '028370', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '37075', 'epa.co2TailpipeGpm': '252.0', 'epa.model' : 'Civic 4Dr', 'epa.trim' : 'Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo',
     },
 
     # http://www.vindecoder.net/?vin=1C4RJEAG2EC476429&submit=Decode
@@ -35,28 +34,16 @@ TEST_DATA = [
      'MODEL': 'Ram 1500', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '488952', 'FEWER_THAN_500_PER_YEAR': False},
 
-    # Breadcrumbs for how libvin/epa.py looks up the epa results:
     # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1GB0C4EGXGZ280783
-    # http://www.fueleconomy.gov/ws/rest/vehicle/menu/model?year=2016&make=Chevrolet
-    # http://www.fueleconomy.gov/ws/rest/vehicle/menu/options?year=2016&make=Chevrolet&model=Silverado%20C15%202WD
-    # There is ambiguity, so all possibly matching epa variants for this epa model are listed:
-    # http://www.fueleconomy.gov/ws/rest/vehicle/37007
-    ## http://www.fueleconomy.gov/ws/rest/vehicle/37006
-    ## http://www.fueleconomy.gov/ws/rest/vehicle/37008
     {'VIN': '1GB0C4EGXGZ280783', 'WMI': '1GB', 'VDS': '0C4EGX', 'VIS': 'GZ280783',
      'MODEL': 'Silverado', 'MAKE': 'Chevrolet', 'YEAR': 2016, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '280783', 'FEWER_THAN_500_PER_YEAR': False,
-     'nhtsa.trim': '', 'nhtsa.series': '',
-     'epa.id' : '37007', 'epa.co2TailpipeGpm': '493.0', 'epa.model' : 'Silverado C15 2WD', 'epa.trim' : 'Auto 8-spd, 8 cyl, 5.3 L, SIDI',
-     #'epa.id' : '37006', 'epa.co2TailpipeGpm': '480.0', 'epa.model' : 'Silverado C15 2WD', 'epa.trim' : 'Auto 6-spd, 8 cyl, 5.3 L, SIDI',
-     #'epa.id' : '37008', 'epa.co2TailpipeGpm': '527.0', 'epa.model' : 'Silverado C15 2WD', 'epa.trim' : 'Auto 8-spd, 8 cyl, 6.2 L, SIDI',
     },
 
     # http://www.fueleconomy.gov/ws/rest/vehicle/36354
     {'VIN': '1GNKRHKD2GJ223195', 'WMI': '1GN', 'VDS': 'KRHKD2', 'VIS': 'GJ223195',
      'MODEL': 'Traverse AWD', 'MAKE': 'Chevrolet', 'YEAR': 2016, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '223195', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '36354', 'epa.co2TailpipeGpm': '519.0', 'epa.model' : 'Traverse AWD', 'epa.trim' : 'Auto 6-spd, 6 cyl, 3.6 L',
     },
 
     # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1N4BL3AP5DN508203
@@ -178,11 +165,9 @@ TEST_DATA = [
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '565906', 'FEWER_THAN_500_PER_YEAR': False},
 
     # http://www.toyodiy.com/parts/q?vin=2t1kr32e26c557497 says ATM 4-SPEED FLOOR SHIFT (how's it know?)
-    # http://www.fueleconomy.gov/ws/rest/vehicle/22123
     {'VIN': '2T1KR32E16C583752', 'WMI': '2T1', 'VDS': 'KR32E1', 'VIS': '6C583752',
      'MODEL': 'Matrix', 'MAKE': 'Toyota', 'YEAR': 2006, 'COUNTRY': 'Canada',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '583752', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '22123', 'epa.co2TailpipeGpm': '329.1', 'epa.model' : 'Matrix', 'epa.trim' : 'Auto 4-spd, 4 cyl, 1.8 L',
     },
 
     # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/2T2BGMCA0GC004299
@@ -203,7 +188,6 @@ TEST_DATA = [
     {'VIN': '3C4PDCBG3ET296933', 'WMI': '3C4', 'VDS': 'PDCBG3', 'VIS': 'ET296933',
      'MODEL': 'Journey', 'MAKE': 'Dodge', 'YEAR': 2014, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '296933', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '34122', 'epa.co2TailpipeGpm': '456.0', 'epa.model' : 'Journey FWD', 'epa.trim' : 'Auto 6-spd, 6 cyl, 3.6 L',
     },
 
     # http://www.vindecoder.net/?vin=3C6JD7CT4CG104778&submit=Decode
@@ -213,11 +197,9 @@ TEST_DATA = [
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '104778', 'FEWER_THAN_500_PER_YEAR': False},
 
     # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/3CZRU5H35GM739695
-    # http://www.fueleconomy.gov/ws/rest/vehicle/35999
     {'VIN': '3CZRU5H35GM739695', 'WMI': '3CZ', 'VDS': 'RU5H35', 'VIS': 'GM739695',
      'MODEL': 'HR-V', 'MAKE': 'Honda', 'YEAR': 2016, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '739695', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '35999', 'epa.co2TailpipeGpm': '285.0', 'epa.model' : 'HR-V 2WD', 'epa.trim' : 'Auto (variable gear ratios), 4 cyl, 1.8 L',
     },
 
     # http://www.vindecoder.net/?vin=3D4PH6FV5AT152960&submit=Decode
@@ -252,7 +234,6 @@ TEST_DATA = [
     {'VIN': '3GNFK16387G115163', 'WMI': '3GN', 'VDS': 'FK1638', 'VIS': '7G115163',
      'MODEL': 'Suburban', 'MAKE':  'Chevrolet', 'YEAR': 2007, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '115163', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '23047', 'epa.co2TailpipeGpm': '555.4', 'epa.model' : 'Suburban 1500 4WD', 'epa.trim' : 'Auto 4-spd, 8 cyl, 5.3 L',
     },
 
     # http://www.vindecoder.net/?vin=3GYVKMEF5AG416315&submit=Decode
@@ -265,15 +246,10 @@ TEST_DATA = [
      'MODEL': 'MKZ', 'MAKE':  'Lincoln', 'YEAR': 2011, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '262548', 'FEWER_THAN_500_PER_YEAR': False},
 
-    # Can't tell transmission from vin, so pick one at random :-(
     # https://vpic.nhtsa.dot.gov/mid/home/displayfile/6089
-    # http://www.fueleconomy.gov/ws/rest/vehicle/36534
-    ## http://www.fueleconomy.gov/ws/rest/vehicle/36535
     {'VIN': '3MZBM1K72GM303265', 'WMI': '3MZ', 'VDS': 'BM1K72', 'VIS': 'GM303265',
      'MODEL': 'Mazda3', 'MAKE': 'Mazda', 'YEAR': 2016, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '303265', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '36534', 'epa.co2TailpipeGpm': '269.0', 'epa.model' : '3 5-Door', 'epa.trim' : 'Man 6-spd, 4 cyl, 2.0 L, SIDI',
-     #'epa.id' : '36535', 'epa.co2TailpipeGpm': '265.0', 'epa.model' : '3 5-Door', 'epa.trim' : 'Auto (S6), 4 cyl, 2.0 L, SIDI',
     },
 
     # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/3TMCZ5AN2GM040551
@@ -297,7 +273,6 @@ TEST_DATA = [
     {'VIN': '4S3BNAH62G3049699', 'WMI': '4S3', 'VDS': 'BNAH62', 'VIS': 'G3049699',
      'MODEL': 'Legacy', 'MAKE': 'Subaru', 'YEAR': 2016, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '049699', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '36406', 'epa.co2TailpipeGpm': '298.0', 'epa.model' : 'Legacy AWD', 'epa.trim' : 'Auto(AV-S6), 4 cyl, 2.5 L',
     },
 
     # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/55SWF4JB6GU104745
@@ -368,14 +343,12 @@ TEST_DATA = [
     {'VIN': '5XXGM4A7XFG459047', 'WMI': '5XX', 'VDS': 'GM4A7X', 'VIS': 'FG459047',
      'MODEL': 'Optima', 'MAKE': 'Kia', 'YEAR': 2015, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '459047', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '34949', 'epa.co2TailpipeGpm': '330.0', 'epa.model' : 'Optima', 'epa.trim' : 'Auto (S6), 4 cyl, 2.4 L',
     },
 
     # http://www.fueleconomy.gov/ws/rest/vehicle/35500
     {'VIN': '5YFBURHE9FP280940', 'WMI': '5YF', 'VDS': 'BURHE9', 'VIS': 'FP280940',
      'MODEL': 'Corolla', 'MAKE':  'Toyota', 'YEAR': 2015, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '280940', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '35500', 'epa.co2TailpipeGpm': '280.0', 'epa.model' : 'Corolla', 'epa.trim' : 'Man 6-spd, 4 cyl, 1.8 L',
     },
 
     # http://www.vindecoder.net/?vin=JA4AD2A3XEZ426420&submit=Decode didn't have model
@@ -449,7 +422,6 @@ TEST_DATA = [
     {'VIN': 'KNMAT2MT0GP672329', 'WMI': 'KNM', 'VDS': 'AT2MT0', 'VIS': 'GP672329',
      'MODEL': 'Rogue', 'MAKE': 'Nissan', 'YEAR': 2016, 'COUNTRY': 'Korea (South)',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '672329', 'FEWER_THAN_500_PER_YEAR': False,
-     'epa.id' : '36940', 'epa.co2TailpipeGpm': '318.0', 'epa.model' : 'Rogue FWD', 'epa.trim' : 'Auto (variable gear ratios), 4 cyl, 2.5 L',
     },
 
     # http://www.vindecoder.net/?vin=SCBEC9ZA1EC225243&submit=Decode
