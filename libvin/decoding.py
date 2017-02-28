@@ -4,7 +4,7 @@ libvin - VIN Vehicle information number checker
 (c) Copyright 2016 Dan Kegel <dank@kegel.com>
 """
 
-from libvin.static import *
+from static import *
 
 class Vin(object):
     def __init__(self, vin):
@@ -154,6 +154,7 @@ class Vin(object):
         '''
         man = self.manufacturer
         for suffix in [
+           'Argentina',
            'Canada',
            'Cars',
            'France',
@@ -164,34 +165,42 @@ class Vin(object):
            'Turkey',
            'USA',
            'USA - trucks',
+           'USA (AutoAlliance International)',
            ]:
              if man.endswith(suffix):
                 man = man.replace(" %s" % suffix, "")
         if man == "General Motors":
             return "GMC"
-        make = man
-        # 2012 and later: first 3 positions became overloaded, some 'make' aka brand info moved further in; see
-        # https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/Chrysler/VIN_Codes
-        # http://www.allpar.com/mopar/vin-decoder.html
-        if self.year > 2011:
-            if man == 'Chrysler':
+        if man == 'Chrysler':
+            # 2012 and later: first 3 positions became overloaded, some 'make' aka brand info moved further in; see
+            # https://en.wikibooks.org/wiki/Vehicle_Identification_Numbers_(VIN_codes)/Chrysler/VIN_Codes
+            # http://www.allpar.com/mopar/vin-decoder.html
+            if self.year > 2011:
                 brandcode = self.vin[4]
                 if brandcode == 'D':
-                    make = 'Dodge'
+                    return 'Dodge'
                 if brandcode == 'F':
-                    make = 'Fiat'
+                    return 'Fiat'
                 if brandcode == 'J':
-                    make = 'Jeep'
+                    return 'Jeep'
+        if man == "Fuji Heavy Industries (Subaru)":
+            return 'Subaru'
         if man == 'Nissan':
-            # FIXME: this was gathered from just four test cases, probably needs updating
-            brandcode = self.vin[3:5]
-            if brandcode == 'CV':
-                make = 'Infiniti'
-            if brandcode == 'BS':
-                make = 'Infiniti'
-            if brandcode == 'CS':
-                make = 'Infiniti'
-        return make
+            # ftp://safercar.gov/MfrMail/ORG7377.pdf "MY12 Nissan VIN Coding System"
+            # https://vpic.nhtsa.dot.gov/mid/home/displayfile/29173 "MY16 Nissan VIN Coding System"
+            # say Ininiti if offset 4 is [JVY], Nissan otherwise.
+            # ftp://safercar.gov/MfrMail/ORG6337.pdf "MY11 Nissan VIN Coding System"
+            # says that plus Infiniti if offset 4 + 5 are S1.  (Nissan Rogue is S5.)
+            # ftp://ftp.nhtsa.dot.gov/mfrmail/ORG7846.pdf "MY13 Nissan VIN Coding System"
+            # says that plus Infiniti if offset 4 + 5 are L0.
+            if self.vin[4] in "JVY" or self.vin[4:6] == 'S1' or self.vin[4:6] == 'L0':
+                return 'Infiniti'
+        if man == 'Renault Samsung':
+            # FIXME: they build other makes, too
+            return 'Nissan'
+        if man == 'Subaru-Isuzu Automotive':
+            return 'Subaru'
+        return man
 
     @property
     def year(self):
