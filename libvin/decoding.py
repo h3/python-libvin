@@ -6,6 +6,7 @@ libvin - VIN Vehicle information number checker
 
 from static import *
 
+
 class Vin(object):
     def __init__(self, vin):
         self.vin = vin.upper()
