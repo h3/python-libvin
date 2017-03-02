@@ -1,9 +1,23 @@
+# To run tests that depend on network, do e.g. 'NETWORK_OK=1 nose2'
+import os
+if 'NETWORK_OK' in os.environ:
+    import requests
+    import requests_cache
+    # Cache responses for 7 days to be kind to servers (and rerun quickly)
+    requests_cache.install_cache('libvin_tests_cache', expire_after=7*24*60*60)
+
 # Sorted alphabetically by VIN
 TEST_DATA = [
     # http://www.vindecoder.net/?vin=137ZA903X1E412677&submit=Decode unchecked
     {'VIN': '137ZA903X1E412677', 'WMI': '137', 'VDS': 'ZA903X', 'VIS': '1E412677',
      'MODEL': 'H1', 'MAKE':  'Hummer', 'YEAR': 2001, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '412677', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # http://www.fueleconomy.gov/ws/rest/vehicle/37075
+    {'VIN': '19XFC1F7XGE028370', 'WMI': '19X', 'VDS': 'FC1F7X', 'VIS': 'GE028370',
+     'MODEL': 'Civic', 'MAKE': 'Honda', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '028370', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # http://www.vindecoder.net/?vin=1C4RJEAG2EC476429&submit=Decode
     {'VIN': '1C4RJEAG2EC476429', 'WMI': '1C4', 'VDS': 'RJEAG2', 'VIS': 'EC476429',
@@ -19,6 +33,24 @@ TEST_DATA = [
     {'VIN': '1D7RB1CT1BS488952', 'WMI': '1D7', 'VDS': 'RB1CT1', 'VIS': 'BS488952',
      'MODEL': 'Ram 1500', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '488952', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1GB0C4EGXGZ280783
+    {'VIN': '1GB0C4EGXGZ280783', 'WMI': '1GB', 'VDS': '0C4EGX', 'VIS': 'GZ280783',
+     'MODEL': 'Silverado', 'MAKE': 'Chevrolet', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '280783', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # http://www.fueleconomy.gov/ws/rest/vehicle/36354
+    {'VIN': '1GNKRHKD2GJ223195', 'WMI': '1GN', 'VDS': 'KRHKD2', 'VIS': 'GJ223195',
+     'MODEL': 'Traverse AWD', 'MAKE': 'Chevrolet', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '223195', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1N4BL3AP5DN508203
+    {'VIN': '1N4BL3AP5DN508203', 'WMI': '1N4', 'VDS': 'BL3AP5', 'VIS': 'DN508203',
+     'MODEL': 'Altima', 'MAKE': 'Nissan', 'YEAR': 2013, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '508203', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # http://www.vindecoder.net/?vin=19UUA65694A043249&submit=Decode
     # http://acurazine.com/forums/vindecoder.php?vin=19UUA65694A043249
@@ -53,6 +85,18 @@ TEST_DATA = [
     {'VIN': '1GYFC56299R410242', 'WMI': '1GY', 'VDS': 'FC5629', 'VIS': '9R410242',
      'MODEL': 'Escalade ESV', 'MAKE':  'Cadillac', 'YEAR': 2009, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '410242', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1YVHZ8DH0C5M33844
+    {'VIN': '1YVHZ8DH0C5M33844', 'WMI': '1YV', 'VDS': 'HZ8DH0', 'VIS': 'C5M33844',
+     'MODEL': 'Mazda6', 'MAKE': 'Mazda', 'YEAR': 2012, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': 'M33844', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1ZVBP8CF4E5242560
+    {'VIN': '1ZVBP8CF4E5242560', 'WMI': '1ZV', 'VDS': 'BP8CF4', 'VIS': 'E5242560',
+     'MODEL': 'Mustang', 'MAKE': 'Ford', 'YEAR': 2014, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '242560', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # http://www.vindecoder.net/?vin=19VDE2E5XEE644230&submit=Decode unchecked
     # http://acurazine.com/forums/vindecoder.php?vin=19VDE2E5XEE644230
@@ -91,6 +135,18 @@ TEST_DATA = [
      'MODEL': 'F-150', 'MAKE':  'Ford', 'YEAR': 1984, 'COUNTRY': 'Canada',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': 'A55516', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/2GCEC13C981202392
+    {'VIN': '2GCEC13C981202392', 'WMI': '2GC', 'VDS': 'EC13C9', 'VIS': '81202392',
+     'MODEL': 'Silverado', 'MAKE': 'Chevrolet', 'YEAR': 2008, 'COUNTRY': 'Canada',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '202392', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/2GNFLPE55C6105926
+    {'VIN': '2GNFLPE55C6105926', 'WMI': '2GN', 'VDS': 'FLPE55', 'VIS': 'C6105926',
+     'MODEL': 'Equinox', 'MAKE': 'Chevrolet', 'YEAR': 2012, 'COUNTRY': 'Canada',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '105926', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=2G61W5S83E9422251&submit=Decode
     # ftp://safercar.gov/MfrMail/ORG7595.pdf "General Motors LLC 2013 Vehicle Identification Numbering Standard"
     {'VIN': '2G61W5S83E9422251', 'WMI': '2G6', 'VDS': '1W5S83', 'VIS': 'E9422251',
@@ -108,6 +164,18 @@ TEST_DATA = [
      'MODEL': 'MKT', 'MAKE':  'Lincoln', 'YEAR': 2012, 'COUNTRY': 'Canada',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '565906', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.toyodiy.com/parts/q?vin=2t1kr32e26c557497 says ATM 4-SPEED FLOOR SHIFT (how's it know?)
+    {'VIN': '2T1KR32E16C583752', 'WMI': '2T1', 'VDS': 'KR32E1', 'VIS': '6C583752',
+     'MODEL': 'Matrix', 'MAKE': 'Toyota', 'YEAR': 2006, 'COUNTRY': 'Canada',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '583752', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/2T2BGMCA0GC004299
+    {'VIN': '2T2BGMCA0GC004299', 'WMI': '2T2', 'VDS': 'BGMCA0', 'VIS': 'GC004299',
+     'MODEL': 'RX', 'MAKE': 'Lexus', 'YEAR': 2016, 'COUNTRY': 'Canada',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '004299', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vin-decoder.org/details?vin=3C3CFFCR9FT528063
     # http://www.fiat500usa.com/2013/08/decoding-fiat-500-vin.html
     # Chrysler Passenger Car Vehicle Identification Number Code Guide
@@ -116,11 +184,23 @@ TEST_DATA = [
      'MODEL': '500', 'MAKE':  'Fiat', 'YEAR': 2015, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '528063', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.fueleconomy.gov/ws/rest/vehicle/34122
+    {'VIN': '3C4PDCBG3ET296933', 'WMI': '3C4', 'VDS': 'PDCBG3', 'VIS': 'ET296933',
+     'MODEL': 'Journey', 'MAKE': 'Dodge', 'YEAR': 2014, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '296933', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=3C6JD7CT4CG104778&submit=Decode
     # ftp://safercar.gov/MfrMail/ORG7565.pdf
     {'VIN': '3C6JD7CT4CG104778', 'WMI': '3C6', 'VDS': 'JD7CT4', 'VIS': 'CG104778',
      'MODEL': 'Ram 1500 Pickup', 'MAKE':  'Dodge', 'YEAR': 2012, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '104778', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/3CZRU5H35GM739695
+    {'VIN': '3CZRU5H35GM739695', 'WMI': '3CZ', 'VDS': 'RU5H35', 'VIS': 'GM739695',
+     'MODEL': 'HR-V', 'MAKE': 'Honda', 'YEAR': 2016, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '739695', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # http://www.vindecoder.net/?vin=3D4PH6FV5AT152960&submit=Decode
     # http://www.rambodybuilder.com/2010/docs/intro/vin.pdf
@@ -144,6 +224,18 @@ TEST_DATA = [
      'MODEL': 'Ram 3500', 'MAKE':  'Dodge', 'YEAR': 2011, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '113805', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/3GCEC13078G157479
+    {'VIN': '3GCEC13078G157479', 'WMI': '3GC', 'VDS': 'EC1307', 'VIS': '8G157479',
+     'MODEL': 'Silverado', 'MAKE': 'Chevrolet', 'YEAR': 2008, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '157479', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # http://www.fueleconomy.gov/ws/rest/vehicle/23047
+    {'VIN': '3GNFK16387G115163', 'WMI': '3GN', 'VDS': 'FK1638', 'VIS': '7G115163',
+     'MODEL': 'Suburban', 'MAKE':  'Chevrolet', 'YEAR': 2007, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '115163', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=3GYVKMEF5AG416315&submit=Decode
     {'VIN': '3GYVKMEF5AG416315', 'WMI': '3GY', 'VDS': 'VKMEF5', 'VIS': 'AG416315',
      'MODEL': 'Escalade', 'MAKE':  'Cadillac', 'YEAR': 2010, 'COUNTRY': 'Mexico',
@@ -154,10 +246,46 @@ TEST_DATA = [
      'MODEL': 'MKZ', 'MAKE':  'Lincoln', 'YEAR': 2011, 'COUNTRY': 'Mexico',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '262548', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/mid/home/displayfile/6089
+    {'VIN': '3MZBM1K72GM303265', 'WMI': '3MZ', 'VDS': 'BM1K72', 'VIS': 'GM303265',
+     'MODEL': 'Mazda3', 'MAKE': 'Mazda', 'YEAR': 2016, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '303265', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/3TMCZ5AN2GM040551
+    {'VIN': '3TMCZ5AN2GM040551', 'WMI': '3TM', 'VDS': 'CZ5AN2', 'VIS': 'GM040551',
+     'MODEL': 'Tacoma', 'MAKE': 'Toyota', 'YEAR': 2016, 'COUNTRY': 'Mexico',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '040551', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=4A31K3DT4CE403200&submit=Decode
     {'VIN': '4A31K3DT4CE403200', 'WMI': '4A3', 'VDS': '1K3DT4', 'VIS': 'CE403200',
      'MODEL': 'Eclipse', 'MAKE':  'Mitsubishi', 'YEAR': 2012, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '403200', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/4JGDA6DB9GA764832
+    {'VIN': '4JGDA6DB9GA764832', 'WMI': '4JG', 'VDS': 'DA6DB9', 'VIS': 'GA764832',
+     'MODEL': 'GLE', 'MAKE': 'Mercedes-Benz', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '764832', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # http://www.fueleconomy.gov/ws/rest/vehicle/36406
+    {'VIN': '4S3BNAH62G3049699', 'WMI': '4S3', 'VDS': 'BNAH62', 'VIS': 'G3049699',
+     'MODEL': 'Legacy', 'MAKE': 'Subaru', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '049699', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/55SWF4JB6GU104745
+    {'VIN': '55SWF4JB6GU104745', 'WMI': '55S', 'VDS': 'WF4JB6', 'VIS': 'GU104745',
+     'MODEL': 'C-Class', 'MAKE': 'Mercedes-Benz', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '104745', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/58ABK1GG4GU016219
+    {'VIN': '58ABK1GG4GU016219', 'WMI': '58A', 'VDS': 'BK1GG4', 'VIS': 'GU016219',
+     'MODEL': 'ES', 'MAKE': 'Lexus', 'YEAR': 2016, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '016219', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # http://www.vindecoder.net/?vin=5FRYD3H26GB020813&submit=Decode unchecked
     {'VIN': '5FRYD3H26GB020813', 'WMI': '5FR', 'VDS': 'YD3H26', 'VIS': 'GB020813',
@@ -187,6 +315,12 @@ TEST_DATA = [
      'MODEL': 'RDX', 'MAKE':  'Acura', 'YEAR': 2012, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '348655', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/5N1AL0MM1DC339116
+    {'VIN': '5N1AL0MM1DC339116', 'WMI': '5N1', 'VDS': 'AL0MM1', 'VIS': 'DC339116',
+     'MODEL': 'JX35', 'MAKE': 'Infiniti', 'YEAR': 2013, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '339116', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=5N1CR2MN6EC875492&submit=Decode
     {'VIN': '5N1CR2MN6EC875492', 'WMI': '5N1', 'VDS': 'CR2MN6', 'VIS': 'EC875492',
      'MODEL': 'Pathfinder', 'MAKE':  'Nissan', 'YEAR': 2014, 'COUNTRY': 'United States',
@@ -197,6 +331,7 @@ TEST_DATA = [
      'MODEL': 'M', 'MAKE':  'BMW', 'YEAR': 2006, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '421092', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # https://vpic.nhtsa.dot.gov/mid/home/displayfile/6197 "BMW Model Year 2015 Decipherment of VINs in Accordance with Part 565"
     # http://www.vindecoder.net/?vin=5UXXW5C54F0791433&submit=Decode
     # http://www.partesymas.com/VIN-Interpretation-Tables-2026.pdf showed 4-7 were the model,body,engine code
     # http://www.autoredbook.com/ distinguished between the two X4 models
@@ -204,11 +339,29 @@ TEST_DATA = [
      'MODEL': 'X4 xDrive35i', 'MAKE':  'BMW', 'YEAR': 2015, 'COUNTRY': 'United States',
      'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '791433', 'FEWER_THAN_500_PER_YEAR': False},
 
+    # http://www.fueleconomy.gov/ws/rest/vehicle/34949
+    {'VIN': '5XXGM4A7XFG459047', 'WMI': '5XX', 'VDS': 'GM4A7X', 'VIS': 'FG459047',
+     'MODEL': 'Optima', 'MAKE': 'Kia', 'YEAR': 2015, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '459047', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
+    # http://www.fueleconomy.gov/ws/rest/vehicle/35500
+    {'VIN': '5YFBURHE9FP280940', 'WMI': '5YF', 'VDS': 'BURHE9', 'VIS': 'FP280940',
+     'MODEL': 'Corolla', 'MAKE':  'Toyota', 'YEAR': 2015, 'COUNTRY': 'United States',
+     'REGION': 'north_america', 'SEQUENTIAL_NUMBER': '280940', 'FEWER_THAN_500_PER_YEAR': False,
+    },
+
     # http://www.vindecoder.net/?vin=JA4AD2A3XEZ426420&submit=Decode didn't have model
     # https://www.mitsubishicars.com/owners/support/vin-information
     {'VIN': 'JA4AD2A3XEZ426420', 'WMI': 'JA4', 'VDS': 'AD2A3X', 'VIS': 'EZ426420',
      'MODEL': 'Outlander ES', 'MAKE':  'Mitsubishi', 'YEAR': 2014, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '426420', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/JF2SJGVC3GH555328
+    {'VIN': 'JF2SJGVC3GH555328', 'WMI': 'JF2', 'VDS': 'SJGVC3', 'VIS': 'GH555328',
+     'MODEL': 'Forester', 'MAKE': 'Subaru', 'YEAR': 2016, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '555328', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # http://www.vindecoder.net/?vin=JH4CW2H53BC567925&submit=Decode
     {'VIN': 'JH4CW2H53BC567925', 'WMI': 'JH4', 'VDS': 'CW2H53', 'VIS': 'BC567925',
@@ -220,6 +373,12 @@ TEST_DATA = [
     {'VIN': 'JN1CV6FE4EM164066', 'WMI': 'JN1', 'VDS': 'CV6FE4', 'VIS': 'EM164066',
      'MODEL': 'Q60 Convertible', 'MAKE':  'Infiniti', 'YEAR': 2014, 'COUNTRY': 'Japan',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '164066', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/JN1AJ0HP7CM401080
+    {'VIN': 'JN1AJ0HP7CM401080', 'WMI': 'JN1', 'VDS': 'AJ0HP7', 'VIS': 'CM401080',
+     'MODEL': 'EX35', 'MAKE': 'Infiniti', 'YEAR': 2012, 'COUNTRY': 'Japan',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '401080', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # And another random JN1 that isn't Infiniti
     # http://nissanvindecoder.com/vins/jn1az44ex9m403788
@@ -258,6 +417,12 @@ TEST_DATA = [
     {'VIN': 'KNDJT2A54D7883468', 'WMI': 'KND', 'VDS': 'JT2A54', 'VIS': 'D7883468',
      'MODEL': 'Soul', 'MAKE':  'Kia', 'YEAR': 2013, 'COUNTRY': 'Korea (South)',
      'REGION': 'asia', 'SEQUENTIAL_NUMBER': '883468', 'FEWER_THAN_500_PER_YEAR': False},
+
+    # http://www.fueleconomy.gov/ws/rest/vehicle/36940
+    {'VIN': 'KNMAT2MT0GP672329', 'WMI': 'KNM', 'VDS': 'AT2MT0', 'VIS': 'GP672329',
+     'MODEL': 'Rogue', 'MAKE': 'Nissan', 'YEAR': 2016, 'COUNTRY': 'Korea (South)',
+     'REGION': 'asia', 'SEQUENTIAL_NUMBER': '672329', 'FEWER_THAN_500_PER_YEAR': False,
+    },
 
     # http://www.vindecoder.net/?vin=SCBEC9ZA1EC225243&submit=Decode
     # https://www.vinaudit.com/vin-search?vin=SCBEC9ZA1EC225243 got model slightly wrong
