@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 import sys, os
 
-VERSION = '0.0.2'
+VERSION = '0.0.3'
 
 REQUIRES = [
-    'nose',
+    'nose', 'requests',
 ]
 
 setup(name='libvin',
