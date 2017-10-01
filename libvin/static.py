@@ -228,6 +228,7 @@ WMI_MAP = {
     'L56': 'Renault Samsung',
     'L5Y': 'Merato Motorcycle Taizhou Zhongneng',
     'LDY': 'Zhongtong Coach, China',
+    'LFV': 'FAW-Volkswagen Automotive, China',
     'LGH': 'Dong Feng (DFM), China',
     'LKL': 'Suzhou King Long, China',
     'LSY': 'Brilliance Zhonghua',
