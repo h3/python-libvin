@@ -156,20 +156,26 @@ class Vin(object):
         man = self.manufacturer
         for suffix in [
            'Argentina',
+           'Brazil',
            'Canada',
            'Cars',
            'France',
            'Hungary',
+           'Hungary',
            'Mexico',
            'Motor Company',
            'Truck USA',
+           'Trucks & Buses',
+           'Trucks',
            'Turkey',
-           'USA',
            'USA - trucks',
            'USA (AutoAlliance International)',
+           'USA',
            ]:
              if man.endswith(suffix):
                 man = man.replace(" %s" % suffix, "")
+             if man.endswith("(%s)" % suffix):
+                man = man.replace(" (%s)" % suffix, "")
         if man == "General Motors":
             return "GMC"
         if man == 'Chrysler':
